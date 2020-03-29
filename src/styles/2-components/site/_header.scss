@@ -1,0 +1,28 @@
+/**
+ * Components / Site
+ * Header
+ */
+
+.header-main {
+  padding: 40px 0;
+
+  .container {
+    @include grid(1fr 1fr 1fr, $align: center);
+  }
+
+  .menu {
+    justify-self: center;
+
+    &-link {
+      margin: 0 32px;
+    }
+  }
+
+  .button-drawer {
+    justify-self: end;
+  }
+
+  .menu-drawer {
+    display: none;
+  }
+}

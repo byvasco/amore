@@ -1,0 +1,128 @@
+/**
+ * Base
+ * Typography
+ */
+
+// Body
+.body {
+  @include font(22, 28, -0.1);
+
+  &-long {
+    @include font(22, 32, -0.04);
+  }
+
+  &-large {
+    @include font(24, 28, 0);
+  }
+
+  &-small {
+    @include font(18, 20, -0.08);
+  }
+
+  &-bold {
+    @include font(22, 28, -0.2, 700);
+  }
+}
+
+p {
+  @extend .body;
+
+  a {
+    font-weight: 500;
+
+    &:hover {
+      color: get-color(accent, primary);
+    }
+  }
+}
+
+// Text Buttons
+.button-text {
+  @include font(16, 20, 0.03, 700, $family: $font-secondary);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+a {
+
+  &.body-large {
+    font-weight: 500;
+  }
+
+  &:hover {
+    &.body-large {
+      opacity: .6;
+    }
+  }
+}
+
+// Quotes
+.quote {
+  &-bold {
+    @include font(28, 32, 0, 700);
+    font-style: italic;
+  }
+}
+
+// Titles
+.title {
+
+  &-6 {
+    @include font(24, 24, -0.4, 800, $family: $font-secondary);
+  }
+}
+
+// Subtitles
+.subtitle {
+  &-bold {
+    @include font(28, 32, -0.45, 700);
+  }
+}
+
+// Label
+.label {
+  @include font(12, 12, -0.26, 700, $family: $font-secondary);
+  text-transform: uppercase;
+}
+
+// Lists
+li {
+  @extend p;
+}
+
+// Modifiers
+.text-heavy {
+  font-weight: 650;
+}
+
+.text-light {
+  color: get-color(text, light);
+}
+
+.text-lighter {
+  color: get-color(text, lighter);
+}
+
+// Other
+figcaption {
+  @include font(14, 16, 0.06);
+}
+
+pre,
+code {
+  @include font(15, 24, -0.3, 400, $family: $font-main);
+  background-color: transparentize(get-color(accent, primary), 0.94);
+}
+
+time {
+  @extend .label;
+}
+
+// Text Selection
+::-moz-selection {
+  background-color: transparentize(get-color(accent, primary), 0.94);
+  color: #2a02e2;
+}
+::selection {
+  background-color: transparentize(get-color(accent, primary), 0.94);
+  color: #2a02e2;
+}

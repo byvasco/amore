@@ -1,0 +1,12 @@
+/**
+ * Components
+ * Titles
+ */
+
+.title-pricing {
+  @include replace-text('titles/title-precario.png', $width: 446px, $height: 88px);
+}
+
+.title-contacts {
+  @include replace-text('titles/title-contactos.png', $width: 349px, $height: 164px);
+}

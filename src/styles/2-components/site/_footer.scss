@@ -1,0 +1,31 @@
+/**
+ * Components / Site
+ * Footer
+ */
+
+.footer-main {
+  padding: 120px 0;
+
+  .container {
+    align-items: center;
+  }
+
+  .menu {
+    .menu-link {
+      margin-right: 32px;
+    }
+  }
+
+  .logo {
+    justify-self: center;
+  }
+
+  .social {
+    justify-self: end;
+    @include flex();
+
+    li {
+      margin-left: 24px;
+    }
+  }
+}

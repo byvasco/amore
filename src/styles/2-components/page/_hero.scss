@@ -1,0 +1,38 @@
+/**
+ * Components / Pages
+ * Hero
+ */
+
+.page-hero {
+  @include wh(100%, 580px);
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    @include wh(100%, 48px);
+    @include background('brushes/brush-hero-top.png', $size: 120%);
+    @include pos(-20px);
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    @include wh(100%, 48px);
+    @include background('brushes/brush-hero-bottom.png', $size: 120%);
+    @include pos($bottom: -20px);
+  }
+}
+
+// .page-main
+&.page-cuidar .page-hero {
+  @include background('heros/background-hero-cuidar.jpg', $size: cover)
+}
+
+&.page-respeitar .page-hero {
+  @include background('heros/background-hero-respeitar.jpg', $size: cover)
+}
+
+&.page-proteger .page-hero {
+  @include background('heros/background-hero-proteger.jpg', $size: cover)
+}

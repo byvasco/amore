@@ -1,0 +1,39 @@
+/**
+ * Components / Pages
+ * Section
+ */
+
+.main-section {
+  padding: 148px 0;
+  position: relative;
+
+  .container {
+    &::before {
+      content: '';
+      display: block;
+      @include wh(100%, 48px);
+      @include background('brushes/brush-section-divider.png', $size: cover);
+      @include pos(-148px);
+    }
+  }
+
+  &.reabilitacao {
+    .title {
+      @include replace-text('titles/title-reabilitacao.png', $width: 346px, $height: 78px);
+    }
+  }
+
+  .section-header {
+    margin-bottom: 72px;
+    
+    .title {
+      margin-bottom: 16px;
+    }
+
+    .intro {
+      max-width: $col-6;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+  }
+}

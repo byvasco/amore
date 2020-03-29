@@ -1,0 +1,97 @@
+/**
+ * Components / Pages
+ * Preçário
+ */
+
+.precario {
+  padding: 148px 0;
+  background-color: white;
+  position: relative;
+  margin-bottom: 20px;
+
+  &::before {
+    content: '';
+    display: block;
+    @include wh(100%, 40px);
+    @include background('brushes/brush-section-divider-full.png', $size: cover);
+    @include pos(-20px);
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    @include wh(100%, 40px);
+    @include background('brushes/brush-section-divider-full.png', $size: cover);
+    @include pos($bottom: -20px);
+  }
+
+  .section-header {
+    margin-bottom: 64px;
+  }
+
+  .plans {
+    margin-bottom: 100px;
+
+    &::after {
+      content: '';
+      display: block;
+      @include wh(3px, 336px);
+      @include background('brushes/brush-pricing-divider.svg', $size: cover);
+      @include pos(-10px, $left: 50%);
+    }
+  }
+
+  .plan {
+    @include wh(100%, $max-w: 346px);
+    
+    .plan-header {
+      margin-bottom: 32px;
+    }
+
+    .plan-name {
+      max-width: 200px;
+    }
+  }
+
+  .plan-left {
+    li {
+      @include flex(space-between);
+    }
+    
+    li + li {
+      margin-top: 14px;
+    }
+  }
+
+  .plan-right {
+    justify-self: end;
+
+    .plan-header {
+      @include flex(space-between, flex-end);
+
+      .label {
+        margin-bottom: 5px;
+      }
+    }
+
+    .main,
+    .secondary {
+      @include flex(space-between);
+    }
+
+    .secondary {
+      margin-top: 2px;
+      padding-left: 16px;
+      @include flex($align: center);
+
+      .value {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+
+    li + li {
+      margin-top: 18px;
+    }
+  }
+}

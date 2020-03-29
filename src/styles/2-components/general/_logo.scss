@@ -1,0 +1,8 @@
+/**
+ * Components
+ * Logo
+ */
+
+.logo {
+  @include replace-text('logo/logo-colored.png', $width: 103px, $height: 120px);
+}

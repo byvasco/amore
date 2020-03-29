@@ -1,0 +1,14 @@
+/**
+ * Components / Pages
+ * Index
+ */
+
+.page-main {
+  @import "header";
+  @import "hero";
+  @import "section";
+  @import "precario";
+  @import "contactos";
+}
+
+@import "page-respeitar/page-respeitar-index";

@@ -1,0 +1,59 @@
+/**
+ * Components / Page - Respeitar
+ * Section - Reabilitacao
+ */
+
+.reabilitacao {
+  .rows {
+    @include grid(1fr, $gap: 64px)
+  }
+  
+  .row {
+    align-items: center;
+
+    .content {
+      p + p {
+        margin-top: 16px;
+      }
+    }
+
+    &.inverted {
+      .image {
+        order: -1
+      }
+    }
+
+    &:first-child {
+      .content {
+        justify-self: center;
+        max-width: $col-4;
+      }
+
+      .image {
+        margin-right: -100px;
+      }
+    }
+
+    &:nth-child(2) {
+      .content {
+        justify-self: center;
+        max-width: $col-5;
+      }
+
+      .image {
+        margin-left: -100px;
+      }
+    }
+
+    &:last-child {
+      .content {
+        justify-self: center;
+        max-width: $col-4;
+      }
+
+      .image {
+        justify-self: end;
+      }
+    }
+  }
+}

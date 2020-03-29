@@ -1,0 +1,63 @@
+/**
+ * Components / Pages
+ * Header
+ */
+
+.page-header {
+  padding-bottom: 100px;
+
+  &::before {
+    content: '';
+    display: block;
+    @include wh(682px, 114px);
+    @include background('brushes/brush-page-title.svg');
+    margin-top: -64px;
+    position: relative;
+  }
+
+  .container {
+    margin-top: -40px;
+  }
+
+  .page-title {
+    margin-bottom: 64px;
+  }
+
+  .page-quote {
+    max-width: 476px;
+    text-align: center;
+    @include flex();
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      @include wh(28px, 28px);
+      @include background('icons/icon-quote.svg');
+      @include pos(50%);
+      margin-top: -14px;
+    }
+
+    &::before {
+      left: -58px;
+    }
+
+    &::after {
+      right: -58px;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+&.page-cuidar .page-header .page-title {
+  @include replace-text('titles/pages/title-cuidar.png', $width: 312px, $height: 146px);
+}
+
+&.page-respeitar .page-header .page-title {
+  @include replace-text('titles/pages/title-respeitar.png', $width: 446px, $height: 146px);
+}
+
+&.page-proteger .page-header .page-title {
+  @include replace-text('titles/pages/title-proteger.png', $width: 424px, $height: 146px);
+}
