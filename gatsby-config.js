@@ -21,19 +21,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Barlow Semi Condensed`,
-            variants: [`700`, `800`],
-          },
-          {
-            family: `Crimson Pro`,
-            variants: [`400`, `700`, `700i`]
-          },
+          `Barlow Semi Condensed\:700,800`,
+          `Crimson Pro\:400,700,700i`
         ],
-      },
-    }
+        display: 'swap'
+      }
+    },
   ]
 }
