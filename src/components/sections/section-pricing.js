@@ -1,11 +1,6 @@
 import React from 'react'
 
-const Pricing = ({ intro, children }) => {
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(intro, 'text/html')
-
-  console.log(doc.body);
-  
+const Pricing = ({ intro, children }) => {  
   return (
     <section className="pricing" id="precario">
       <div className="container flex-center">
