@@ -13,32 +13,29 @@ button {
   transition: all 120ms;
 
   &:hover {
-    transform: scale(0.94);
+    transform: rotate(-5deg);
+    opacity: .95;
   }
 }
 
 .button-social {
-  display: inline-block;
-  @include wh(32px, 32px);
-
   &.facebook {
-    @include background('buttons/social/button-facebook.svg', $size: cover)
+    @include replace-text('buttons/social/button-facebook.svg', $width: 32px, $height: 32px);
   }
 
   &.instagram {
-    @include background('buttons/social/button-instagram.svg', $size: cover)
+    @include replace-text('buttons/social/button-instagram.svg', $width: 32px, $height: 32px);
   }
 
   &.twitter {
-    @include background('buttons/social/button-twitter.svg', $size: cover)
+    @include replace-text('buttons/social/button-twitter.svg', $width: 32px, $height: 32px);
   }
 }
 
 .button {
   display: inline-block;
-  padding: 16px 0;
+  padding: 16px 36px;
   position: relative;
-  @include wh(230px, 54px);
   @extend .button-text;
   color: get-color(text, white);
   text-align: center;
@@ -47,13 +44,14 @@ button {
 
   &:hover {
     transform: scale(.98);
+    opacity: .9;
   }
 
   &::before {
     content: '';
     display: block;
-    @include wh(230px, 54px);
-    @include background('buttons/button-background-dark-medium.svg', $size: 100%);
+    @include wh(100%, 54px);
+    @include background('buttons/button-background-dark.svg', $size: 100% 100%);
     @include pos(0, $left: 0, $z: -1);
   }
 

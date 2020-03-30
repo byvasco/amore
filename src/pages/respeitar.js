@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import LayoutMainPage from '../components/layout-main-page'
-import MainSectionHeader from '../components/sections/main-section-header'
+import MainPageSectionHeader from '../components/sections/main-page--section-header'
 import Pricing from '../components/sections/section-pricing'
 import Contacts from '../components/sections/section-contacts'
 
@@ -64,7 +64,8 @@ const Respeitar = () => {
     >
       <section className="main-section reabilitacao">
         <div className="container flex-center">
-          <MainSectionHeader
+          <MainPageSectionHeader
+            name="reabilitacao"
             title="Reabilitação"
             intro="O teu animal não é apenas comportamento. É uma vida; um estado emocional e psicológico. Ele sofre e tem medo."
             button="true"
@@ -101,7 +102,7 @@ const Respeitar = () => {
       </section>
     
       <Pricing>
-        <div className="plans container-small grid-2">
+        <div className="plans grid-2">
           <div className="plan plan-left">
             <header className="plan-header">
               <h3 className="plan-name subtitle-bold">Consultas de Avaliação</h3>

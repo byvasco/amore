@@ -1,35 +1,12 @@
 /**
- * Components / Pages
- * Preçário
+ * Components / Page - Respeitar
+ * Section - Reabilitação
  */
 
-.precario {
-  padding: 148px 0;
-  background-color: white;
-  position: relative;
-  margin-bottom: 20px;
-
-  &::before {
-    content: '';
-    display: block;
-    @include wh(100%, 40px);
-    @include background('brushes/brush-section-divider-full.png', $size: cover);
-    @include pos(-20px);
-  }
-
-  &::after {
-    content: '';
-    display: block;
-    @include wh(100%, 40px);
-    @include background('brushes/brush-section-divider-full.png', $size: cover);
-    @include pos($bottom: -20px);
-  }
-
-  .section-header {
-    margin-bottom: 64px;
-  }
-
+.pricing {
   .plans {
+    @include wh(100%, $max-w: $col-8);
+    position: relative;
     margin-bottom: 100px;
 
     &::after {

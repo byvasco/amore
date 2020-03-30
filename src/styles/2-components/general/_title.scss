@@ -3,10 +3,30 @@
  * Titles
  */
 
+.title-cuidar {
+  @include replace-text('titles/pages/title-cuidar.png', $width: 312px, $height: 146px);
+}
+
+.title-respeitar {
+  @include replace-text('titles/pages/title-respeitar.png', $width: 446px, $height: 146px);
+}
+
+.title-proteger {
+  @include replace-text('titles/pages/title-proteger.png', $width: 424px, $height: 146px);
+}
+
+.title-reabilitacao {
+  @include replace-text('titles/title-reabilitacao.png', $width: 346px, $height: 78px);
+}
+
+.title-alojamento {
+  @include replace-text('titles/title-alojamento.png', $width: 346px, $height: 78px);
+}
+
 .title-pricing {
-  @include replace-text('titles/title-precario.png', $width: 446px, $height: 88px);
+  @include replace-text('titles/title-pricing.png', $width: 446px, $height: 88px);
 }
 
 .title-contacts {
-  @include replace-text('titles/title-contactos.png', $width: 349px, $height: 164px);
+  @include replace-text('titles/title-contacts.png', $width: 349px, $height: 164px);
 }

@@ -24,7 +24,7 @@
   }
 
   .page-quote {
-    max-width: 476px;
+    max-width: 682px;
     text-align: center;
     @include flex();
     position: relative;
@@ -48,16 +48,4 @@
       transform: rotate(180deg);
     }
   }
-}
-
-&.page-cuidar .page-header .page-title {
-  @include replace-text('titles/pages/title-cuidar.png', $width: 312px, $height: 146px);
-}
-
-&.page-respeitar .page-header .page-title {
-  @include replace-text('titles/pages/title-respeitar.png', $width: 446px, $height: 146px);
-}
-
-&.page-proteger .page-header .page-title {
-  @include replace-text('titles/pages/title-proteger.png', $width: 424px, $height: 146px);
 }

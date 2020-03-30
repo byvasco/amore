@@ -17,12 +17,6 @@
     }
   }
 
-  &.reabilitacao {
-    .title {
-      @include replace-text('titles/title-reabilitacao.png', $width: 346px, $height: 78px);
-    }
-  }
-
   .section-header {
     margin-bottom: 72px;
     

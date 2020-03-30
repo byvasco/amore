@@ -1,0 +1,71 @@
+/**
+ * Components / Page - Cuidar
+ * Section - Reabilitação
+ */
+
+.pricing {
+  .plans {
+    width: 100%;
+    justify-items: center;
+    margin-bottom: 80px;
+  }
+
+  .plan {
+    @include wh(100%, $max-w: 306px);
+    position: relative;
+
+    .main,
+    .secondary {
+      @include flex(space-between, center);
+    }
+
+    .main {
+      margin-bottom: 8px;
+    }
+
+    .secondary {
+      padding-left: 16px;
+
+      & + .secondary {
+        margin-top: 4px;
+      }
+
+      .value {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+
+    .label {
+      margin-top: 10px;
+      text-align: right;
+    }
+
+    &-middle {
+      &::before {
+        content: '';
+        display: block;
+        @include wh(3px, 150px);
+        @include background('brushes/brush-pricing-divider-small.svg', $size: cover);
+        @include pos(-20px, $left: -52px);
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        @include wh(3px, 150px);
+        @include background('brushes/brush-pricing-divider-small.svg', $size: cover);
+        @include pos(-20px, $right: -52px);
+      }
+    }
+  }
+
+  .cta {
+    margin-bottom: 24px;
+  }
+
+  .note {
+    max-width: 300px;
+    text-align: center;
+  }
+}

@@ -22,9 +22,9 @@ $colors: (
     black: #000
   ),
   text: (
-    primary: #1D3C34,
+    primary: #00253D,
     light: #787B83,
-    lighter: #B0B0B0,
+    lighter: #B3BCC1,
     white: #FDFDFD
   ),
   accent: (
@@ -32,6 +32,10 @@ $colors: (
   ),
   border: (
     primary: #F0F0F0
+  ),
+  button: (
+    dark: #00253D,
+    dark-hover: #083E62
   )
 );
 

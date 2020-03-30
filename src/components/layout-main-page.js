@@ -10,8 +10,8 @@ const LayoutMainPage = ({ name, title, quote, children }) => {
 
       <header className="page-header flex-center">
         <div className="container flex-center">
-          <h1 className="page-title">{title}</h1>
-          <p className="page-quote quote-bold">{quote}</p>
+          <h1 className={`page-title title-${name}`}>{title}</h1>
+          <p className="page-quote quote">{quote}</p>
         </div>
       </header>
 

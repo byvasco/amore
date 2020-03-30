@@ -41,7 +41,9 @@ p {
   @include font(16, 20, 0.03, 700, $family: $font-secondary);
   text-transform: uppercase;
   text-decoration: none;
+  display: inline-block;
 }
+
 a {
 
   &.body-large {
@@ -57,14 +59,16 @@ a {
 
 // Quotes
 .quote {
-  &-bold {
-    @include font(28, 32, 0, 700);
-    font-style: italic;
-  }
+  @include font(28, 32, 0.3, 400);
+  font-style: italic;
 }
 
 // Titles
 .title {
+
+  &-5 {
+    @include font(28, 24, -0.47, 800, $family: $font-secondary);
+  }
 
   &-6 {
     @include font(24, 24, -0.4, 800, $family: $font-secondary);
@@ -117,12 +121,16 @@ time {
   @extend .label;
 }
 
+.highlight {
+  @include background('brushes/brush-text-highlight.svg', $size: 100% 8px);
+}
+
 // Text Selection
 ::-moz-selection {
-  background-color: transparentize(get-color(accent, primary), 0.94);
-  color: #2a02e2;
+  background-color: transparentize(#00253D, 0.90);
+  color: #00253D;
 }
 ::selection {
-  background-color: transparentize(get-color(accent, primary), 0.94);
-  color: #2a02e2;
+  background-color: transparentize(#00253D, 0.90);
+  color: #00253D;
 }

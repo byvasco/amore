@@ -1,0 +1,36 @@
+/**
+ * Components / Page - Cuidar
+ * Section - Alojamento
+ */
+
+.alojamento {
+  .images {
+    justify-items: center;
+    margin-bottom: 80px;
+
+    .image:last-child {
+      margin-top: 40px;
+    }
+  }
+
+  .features {
+    &-list {
+      @include wh(100%, $max-w: $col-8);
+      row-gap: 24px;
+    }
+
+    li {
+      max-width: 340px;
+      @include flex($align: center);
+
+      &::before {
+        content: '';
+        display: block;
+        margin-right: 16px;
+        @include wh(24px, 24px);
+        @include background('icons/icon-check.svg', $size: 100%);
+        flex-shrink: 0;
+      }
+    }
+  }
+}

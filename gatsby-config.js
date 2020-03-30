@@ -25,7 +25,7 @@ module.exports = {
       options: {
         fonts: [
           `Barlow Semi Condensed\:700,800`,
-          `Crimson Pro\:400,700,700i`
+          `Crimson Pro\:400,400i,700`
         ],
         display: 'swap'
       }
