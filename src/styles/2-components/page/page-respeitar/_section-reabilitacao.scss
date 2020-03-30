@@ -34,7 +34,16 @@
       }
     }
 
-    &:nth-child(2) {
+    &.row-quote {
+      padding: 24px 0 16px;
+      
+      .caption {
+        margin-top: 24px;
+        color: get-color(text, lighter);
+      }
+    }
+
+    &:nth-child(3) {
       .content {
         justify-self: center;
         max-width: $col-5;

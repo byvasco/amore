@@ -48,12 +48,26 @@ const Respeitar = () => {
           }
         }
       }
+
+      imageQuote: file (relativePath: { eq: "text/text-quote-santi.png" }) {
+        childImageSharp {
+          fixed (width: 262, height: 64, quality: 100) {
+            aspectRatio
+            base64
+            width
+            height
+            src
+            srcSet
+          }
+        }
+      }
     }
   `);
   
   const imageReabilitacao1 = data.image1.childImageSharp.fixed;
   const imageReabilitacao2 = data.image2.childImageSharp.fixed;
   const imageReabilitacao3 = data.image3.childImageSharp.fixed;
+  const imageQuote = data.imageQuote.childImageSharp.fixed;
   
 
   return (
@@ -78,6 +92,11 @@ const Respeitar = () => {
               </div>
 
               <Img fixed={imageReabilitacao1} className="image" />
+            </div>
+
+            <div className="row row-quote flex-center">
+              <Img fixed={imageQuote} />
+              <p className="caption">Jaime Vidal “Santi”</p>
             </div>
 
             <div className="row inverted grid-2">

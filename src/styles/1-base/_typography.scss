@@ -88,6 +88,13 @@ a {
   text-transform: uppercase;
 }
 
+// Caption
+.caption {
+  @include font(14, 16, -0.1, 700, $family: $font-secondary);
+  text-transform: uppercase;
+}
+
+
 // Lists
 li {
   @extend p;
