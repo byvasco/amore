@@ -15,15 +15,15 @@ const Footer = () => (
 
       <ul className="social">
         <li>
-          <a href="https://www.facebook.com/a.amorempatia" class="button-social facebook"></a>
+          <a href="https://www.facebook.com/a.amorempatia" className="button-social facebook">Facebook</a>
         </li>
 
         <li>
-          <a href="https://www.instagram.com/a.amorempatia/" class="button-social instagram"></a>
+          <a href="https://www.instagram.com/a.amorempatia/" className="button-social instagram">Instagram</a>
         </li>
 
         <li>
-          <a href="https://twitter.com/aamorempatia" class="button-social twitter"></a>
+          <a href="https://twitter.com/aamorempatia" className="button-social twitter">Twitter</a>
         </li>
       </ul>
     </div>

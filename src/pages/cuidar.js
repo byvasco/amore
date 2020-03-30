@@ -1,11 +1,11 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+// import { useStaticQuery, graphql } from 'gatsby'
+// import Img from 'gatsby-image'
 
 import LayoutMainPage from '../components/layout-main-page'
 import MainSectionHeader from '../components/sections/main-section-header'
-import Pricing from '../components/sections/section-pricing'
-import Contacts from '../components/sections/section-contacts'
+// import Pricing from '../components/sections/section-pricing'
+// import Contacts from '../components/sections/section-contacts'
 
 const Cuidar = () => (
   <LayoutMainPage

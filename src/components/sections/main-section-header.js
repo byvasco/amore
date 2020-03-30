@@ -6,7 +6,7 @@ const MainSectionHeader = ({ title, intro, button }) => {
     <header className="section-header flex-center">
       <h2 className="title">{title}</h2>
       <p className="intro body-large">{intro}</p>
-      {button == 'true' ? <Link to="/respeitar#precario" className="button-dark page-down">Consultar Preços</Link> : ''}
+      {button === 'true' ? <Link to="/respeitar#precario" className="button-dark page-down">Consultar Preços</Link> : ''}
     </header>
   )
 }

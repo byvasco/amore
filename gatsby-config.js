@@ -20,5 +20,20 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Barlow Semi Condensed`,
+            variants: [`700`, `800`],
+          },
+          {
+            family: `Crimson Pro`,
+            variants: [`400`, `700`, `700i`]
+          },
+        ],
+      },
+    }
   ]
 }
