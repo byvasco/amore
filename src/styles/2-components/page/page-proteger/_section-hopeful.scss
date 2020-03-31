@@ -1,0 +1,44 @@
+/**
+ * Components / Page - Proteger
+ * Section - Projecto Hopeful
+ */
+
+.hopeful {
+  .row:nth-child(2) {
+    margin-bottom: 64px;
+  }
+
+  .service-items {
+    max-width: $col-6;
+
+    li {
+      p {
+        @include flex($align: center);
+      }
+
+      p::before {
+        content: '';
+        display: block;
+        @include wh(56px, 80px);
+        flex-shrink: 0;
+        margin-right: 36px;
+      }
+    }
+
+    li + li {
+      margin-top: 40px;
+    }
+
+    li:first-child p::before {
+      @include background('titles/title-number-1.svg', $size: 100%)
+    }
+
+    li:nth-child(2) p::before {
+      @include background('titles/title-number-2.svg', $size: 100%)
+    }
+
+    li:last-child p::before {
+      @include background('titles/title-number-3.svg', $size: 100%)
+    }
+  }
+}

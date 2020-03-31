@@ -4,5 +4,5 @@
  */
 
 .logo {
-  @include replace-text('logo/logo-colored.png', $width: 103px, $height: 120px);
+  @include replace-text('logos/logo-color.png', $width: 103px, $height: 120px);
 }

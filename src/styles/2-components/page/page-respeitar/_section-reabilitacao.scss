@@ -24,6 +24,8 @@
     }
 
     &:first-child {
+      margin-bottom: 40px;
+
       .content {
         justify-self: center;
         max-width: $col-4;
@@ -35,11 +37,14 @@
     }
 
     &.row-quote {
-      padding: 24px 0 16px;
+      position: relative;
+
+      .quote {
+        @include replace-text('text/text-quote-santi.png', $size: 100%, $width: 262px, $height: 192px);
+      }
       
-      .caption {
-        margin-top: 24px;
-        color: get-color(text, lighter);
+      .author {
+        @include pos($bottom: 48px);
       }
     }
 

@@ -3,7 +3,7 @@ import Layout from './layout'
 
 const LayoutMainPage = ({ name, title, quote, children }) => {
   return (
-    <Layout name={name} type="main">
+    <Layout name={name} title={title} type="main">
       <section className={"page-hero " + name}>
         <div className="hero-image"></div>
       </section>

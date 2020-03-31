@@ -1,16 +1,21 @@
 import React from 'react'
+import { Helmet } from "react-helmet"
 import '../styles/main.scss'
 import Header from './header'
 import Footer from './footer'
 
-const Layout = props => {
-  let className = props.name ? `page-${props.name}` : ''
-  className += props.type ?  ` page-${props.type}` : ''
+const Layout = ({ name, type, title, children }) => {
+  let className = name ? `page-${name}` : ''
+  className += type ?  ` page-${type}` : ''
   
   return (
     <main className={className}>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
+
       <Header />
-      {props.children}
+      {children}
       <Footer />
     </main>
   )

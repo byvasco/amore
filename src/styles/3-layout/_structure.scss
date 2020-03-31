@@ -23,6 +23,7 @@
 
 // Grids structure
 .grid {
+  width: 100%;
   display: grid;
   grid-gap: $gap-width;
 
@@ -34,6 +35,11 @@
   &-3 {
     @extend .grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  &-4 {
+    @extend .grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

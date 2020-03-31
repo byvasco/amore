@@ -23,6 +23,22 @@
   @include replace-text('titles/title-alojamento.png', $width: 346px, $height: 78px);
 }
 
+.title-santuario {
+  @include replace-text('titles/title-santuario.png', $width: 272px, $height: 140px);
+}
+
+.title-hopeful {
+  @include replace-text('titles/title-hopeful.png', $width: 286px, $height: 120px);
+}
+
+.title-adocao {
+  @include replace-text('titles/title-adocao.png', $width: 352px, $height: 78px);
+}
+
+.title-adocao-contact {
+  @include replace-text('titles/title-adocao-contact.png', $width: 492px, $height: 56px);
+}
+
 .title-pricing {
   @include replace-text('titles/title-pricing.png', $width: 446px, $height: 88px);
 }

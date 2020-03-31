@@ -1,0 +1,49 @@
+/**
+ * Components / Page - Proteger
+ * Section - Projecto Hopeful - Adoption
+ */
+
+.adoption {
+  padding-bottom: 120px;
+  
+  // Para Adoção
+  .section-title.title-adocao {
+    margin-bottom: 64px;
+  }
+
+  .animals-list {
+    justify-items: center;
+    row-gap: 80px;
+    margin-bottom: 120px;
+  }
+
+  .animal {
+    @include wh(100%, $max-w: 220px);
+    text-align: center;
+
+    &-image {
+      max-width: 220px;
+      margin-bottom: 24px;
+      transition: all 120ms;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+
+    &-name {
+      transition: all 60ms;
+
+      &:hover {
+        opacity: .6;
+      }
+    }
+  }
+
+  .contact {
+    .section-title,
+    .content {
+      margin-bottom: 32px;
+    }
+  }
+}

@@ -1,12 +1,15 @@
 import React from 'react'
 import Button from '../button/button'
 
-const MainPageSectionHeader = ({ name, title, intro, button }) => {
+const MainPageSectionHeader = ({ name, title, intro, button, buttonText, buttonHash }) => {
   return (
     <header className="section-header flex-center">
       <h2 className={`title title-${name}`}>{title}</h2>
-      <p className="intro body-large">{intro}</p>
-      <Button to={`/${typeof window !== 'undefined' ? window.location.pathname : null}#precario`} variant="page-down">Consultar Preços</Button>
+      {intro ? <p className="intro body-large" dangerouslySetInnerHTML={{ __html: intro }}></p> : ''}
+      
+      {button !== 'false' ?
+        <Button to={typeof window !== 'undefined' ? `${window.location.pathname}/${buttonHash !== undefined ? `#${buttonHash}` : '#precario'}` : null} variant="page-down">{buttonText !== undefined ? buttonText : 'Consultar Preços'}</Button>
+        : null}
     </header>
   )
 }

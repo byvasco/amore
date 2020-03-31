@@ -48,26 +48,12 @@ const Respeitar = () => {
           }
         }
       }
-
-      imageQuote: file (relativePath: { eq: "text/text-quote-santi.png" }) {
-        childImageSharp {
-          fixed (width: 262, height: 64, quality: 100) {
-            aspectRatio
-            base64
-            width
-            height
-            src
-            srcSet
-          }
-        }
-      }
     }
   `);
   
   const imageReabilitacao1 = data.image1.childImageSharp.fixed;
   const imageReabilitacao2 = data.image2.childImageSharp.fixed;
   const imageReabilitacao3 = data.image3.childImageSharp.fixed;
-  const imageQuote = data.imageQuote.childImageSharp.fixed;
   
 
   return (
@@ -95,8 +81,8 @@ const Respeitar = () => {
             </div>
 
             <div className="row row-quote flex-center">
-              <Img fixed={imageQuote} />
-              <p className="caption">Jaime Vidal “Santi”</p>
+              <p className="quote">Ver o medo onde mais ninguém o vê</p>
+              <p className="author label">– Jaime Vidal “Santi”</p>
             </div>
 
             <div className="row inverted grid-2">
@@ -124,7 +110,7 @@ const Respeitar = () => {
         <div className="plans grid-2">
           <div className="plan plan-left">
             <header className="plan-header">
-              <h3 className="plan-name subtitle-bold">Consultas de Avaliação</h3>
+              <h3 className="plan-name body-super">Consultas de Avaliação</h3>
             </header>
 
             <ul className="plan-tiers">
@@ -147,7 +133,7 @@ const Respeitar = () => {
 
           <div className="plan plan-right">
             <header className="plan-header">
-              <h3 className="plan-name subtitle-bold">Protocolos de Reabilitação</h3>
+              <h3 className="plan-name body-super">Protocolos de Reabilitação</h3>
               <p className="label text-lighter">Valor por Dia</p>
             </header>
 

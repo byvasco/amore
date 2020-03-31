@@ -16,11 +16,15 @@
   }
 
   &-small {
-    @include font(18, 20, -0.08);
+    @include font(18, 20, -0.1);
   }
 
   &-bold {
     @include font(22, 28, -0.2, 700);
+  }
+
+  &-super {
+    @include font(28, 32, -0.45, 700);
   }
 }
 
@@ -45,14 +49,20 @@ p {
 }
 
 a {
+  text-decoration: none;
+  
+  .subtitle-small {
+    display: inline-block;
+    position: relative;
 
-  &.body-large {
-    font-weight: 500;
-  }
-
-  &:hover {
-    &.body-large {
-      opacity: .6;
+    &::after {
+      content: '';
+      display: block;
+      @include wh(100%, 3px);
+      @include background('brushes/brush-link-underline.svg', $size: 100%);
+      @include pos($left: 50%, $bottom: -3px);
+      transform: translateX(-50%);
+      transition: all 80ms;
     }
   }
 }
@@ -65,6 +75,10 @@ a {
 
 // Titles
 .title {
+  &-5,
+  &-6 {
+    text-transform: uppercase;
+  }
 
   &-5 {
     @include font(28, 24, -0.47, 800, $family: $font-secondary);
@@ -77,21 +91,19 @@ a {
 
 // Subtitles
 .subtitle {
-  &-bold {
-    @include font(28, 32, -0.45, 700);
+  &-small {
+    text-transform: uppercase;
+  }
+
+  &-small {
+    @include font(20, 24, -0.33, 700, $family: $font-secondary);
   }
 }
 
 // Label
 .label {
+  text-transform: uppercase;
   @include font(12, 12, -0.26, 700, $family: $font-secondary);
-  text-transform: uppercase;
-}
-
-// Caption
-.caption {
-  @include font(14, 16, -0.1, 700, $family: $font-secondary);
-  text-transform: uppercase;
 }
 
 

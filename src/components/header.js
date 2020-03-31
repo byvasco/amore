@@ -8,18 +8,18 @@ const Header = () => (
       <Link to="/" className="logo">Amore</Link>
 
       <nav className="menu">
-        <Link to="respeitar/" activeClassName="active" className="menu-link button-text">Respeitar</Link>
-        <Link to="cuidar/" activeClassName="active" className="menu-link button-text">Cuidar</Link>
-        <Link to="proteger/" activeClassName="active" className="menu-link button-text">Proteger</Link>
+        <Link to="/respeitar" activeClassName="active" className="menu-link button-text">Respeitar</Link>
+        <Link to="/cuidar" activeClassName="active" className="menu-link button-text">Cuidar</Link>
+        <Link to="/proteger" activeClassName="active" className="menu-link button-text">Proteger</Link>
       </nav>
 
       <button className="button-drawer trigger"></button>
 
       <div className="menu-drawer">
         <nav className="links">
-          <Link to="respeitar/" className="button-text">Respeitar</Link>
-          <Link to="cuidar/" className="button-text">Cuidar</Link>
-          <Link to="proteger/" className="button-text">Proteger</Link>
+          <Link to="/respeitar" className="button-text">Respeitar</Link>
+          <Link to="/cuidar" className="button-text">Cuidar</Link>
+          <Link to="/proteger" className="button-text">Proteger</Link>
         </nav>
       </div>
     </div>
