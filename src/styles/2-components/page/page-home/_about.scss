@@ -1,0 +1,69 @@
+/**
+ * Components / Page - Home
+ * About
+ */
+
+.about {
+  .section-header {
+    margin-bottom: 80px;
+
+    .title {
+      margin-bottom: 24px;
+    }
+
+    .intro {
+      max-width: $col-6;
+      text-align: center;
+    }
+  }
+
+  .rows {
+    @include grid(1fr, $gap: 40px)
+    width: 100%;
+  }
+
+  .row {
+    align-items: center;
+
+    .image-wrapper {
+      width: 100%;
+    }
+
+    p + p {
+      margin-top: 16px;
+    }
+
+    &.inverted {
+      .image-wrapper {
+        order: -1;
+      }
+    }
+
+    &:first-child {
+      .content {
+        max-width: $col-4;
+      }
+    }
+
+    &:nth-child(2) {
+      .image-wrapper {
+        max-width: $col-4;
+        justify-self: center;
+      }
+      
+      .content {
+        max-width: $col-4;
+        justify-self: center;
+      }
+    }
+
+    &:last-child {
+      grid-template-columns: 1fr $col-7;
+
+      .quote {
+        justify-self: center;
+        @include replace-text('text/text-quote-about.png', $width: 230px, $height: 262px);
+      }
+    }
+  }
+}

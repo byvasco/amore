@@ -3,6 +3,14 @@
  * Titles
  */
 
+.title-trabalho {
+  @include replace-text('titles/title-trabalho.png', $width: 261px, $height: 120px);
+}
+
+.title-sobre {
+  @include replace-text('titles/title-sobre.png', $width: 211px, $height: 120px);
+}
+
 .title-cuidar {
   @include replace-text('titles/pages/title-cuidar.png', $width: 312px, $height: 146px);
 }

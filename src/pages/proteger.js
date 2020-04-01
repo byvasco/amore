@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import LayoutMainPage from '../components/layout-main-page'
 import MainPageSectionHeader from '../components/sections/main-page--section-header'
-import Button from '../components/button/button'
+import Button from '../components/button'
 
 const Proteger = () => {
   const data = useStaticQuery(graphql`

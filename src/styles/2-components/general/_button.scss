@@ -89,4 +89,13 @@ button {
       }
     }
   }
+
+  &-light {
+    @extend .button;
+    color: get-color(text, primary);
+
+    &::before {
+      @include background('buttons/button-background-light.svg', $size: 100% 100%);
+    }
+  }
 }

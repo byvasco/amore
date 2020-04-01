@@ -8,9 +8,11 @@
   @import "hero";
   @import "section";
   @import "pricing";
-  @import "contactos";
 }
 
+@import "contactos";
+
+@import "page-home/page-home-index";
 @import "page-cuidar/page-cuidar-index";
 @import "page-respeitar/page-respeitar-index";
 @import "page-proteger/page-proteger-index";

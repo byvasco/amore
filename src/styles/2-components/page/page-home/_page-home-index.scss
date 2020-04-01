@@ -1,0 +1,12 @@
+/**
+ * Components / Page Home
+ * Index
+ */
+
+.page-home {
+  @import "hero";
+  @import "work";
+  @import "gallery";
+  @import "about";
+  @import "bottom";
+}

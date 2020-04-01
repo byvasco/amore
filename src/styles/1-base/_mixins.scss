@@ -76,7 +76,7 @@
 }
 
 // Replace text with image
-@mixin replace-text($image, $pos-x: center, $pos-y: center, $size: cover, $width: null, $height: null) {
+@mixin replace-text($image, $pos-x: center, $pos-y: center, $size: 100%, $width: null, $height: null) {
   text-indent: -999999em;
   overflow: hidden;
   text-align: left;

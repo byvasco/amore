@@ -117,6 +117,10 @@ li {
   font-weight: 650;
 }
 
+.text-white {
+  color: get-color(text, white);
+}
+
 .text-light {
   color: get-color(text, light);
 }

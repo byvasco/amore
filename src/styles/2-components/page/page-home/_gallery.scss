@@ -1,0 +1,60 @@
+/**
+ * Components / Page - Home
+ * Galleru
+ */
+
+.gallery {
+  padding: 140px 0;
+
+  .container {
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+    }
+
+    &::before {
+      @include wh(522px, 40px);
+      @include background('brushes/brush-home-gallery-top.png', $size: 100%);
+      @include pos(-32px, $left: 80px);
+      transform: rotate(-3deg);
+    }
+
+    &::after {
+      @include wh(435px, 40px);
+      @include background('brushes/brush-home-gallery-bottom.png', $size: 100%);
+      @include pos($bottom: 0, $right: 180px);
+      transform: rotate(4deg);
+    }
+  }
+
+  .row:first-child {
+    .image-wrapper:first-child,
+    .image-wrapper:last-child {
+      @include wh(100%, $max-w: 492px);
+    }
+
+    .image-wrapper:first-child {
+      margin: 100px 0 0 30px;
+    }
+
+    .image-wrapper:last-child {
+      justify-self: end;
+      margin-right: 20px;
+    }
+  }
+
+  .row:last-child {
+    margin-top: -60px;
+
+    .image-wrapper:first-child {
+      @include wh(100%, $max-w: 385px);
+      justify-self: center;
+      margin-top: 150px;
+    }
+
+    .image-wrapper:last-child {
+      @include wh(100%, $max-w: 490px);
+    }
+  }
+}

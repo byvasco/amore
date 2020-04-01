@@ -4,6 +4,7 @@
  */
 
 .header-main {
+  width: 100%;
   padding: 40px 0;
 
   .container {
@@ -52,5 +53,13 @@
 
   .menu-drawer {
     display: none;
+  }
+
+  &.floating {
+    @include pos(0, $pos: fixed, $z: 999);
+
+    .button-drawer {
+      @include pos(0, 0);
+    }
   }
 }
