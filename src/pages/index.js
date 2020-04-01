@@ -99,7 +99,7 @@ const Home = () => {
   const footer = data.footer.childImageSharp.fluid;
 
   return (
-    <Layout type="home">
+    <Layout type="home" title="Amore">
       <section className="hero">
         <div className="container flex-center">
           <Img fixed={imageLogo} className="hero-logo" alt="Amore" draggable="false" />
