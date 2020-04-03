@@ -148,7 +148,7 @@ const Home = () => {
             </Link>
           </div>
         
-          <p class="quote">Todas as espécies nascem com necessidades e competências específicas.</p>
+          <p className="quote">Todas as espécies nascem com necessidades e competências específicas.</p>
         </div>
       </section>
     
@@ -193,7 +193,7 @@ const Home = () => {
             </div>
 
             <div className="row grid-2">
-              <p class="quote">Ser feliz é, para nós, um estado de plenitude.</p>
+              <p className="quote">Ser feliz é, para nós, um estado de plenitude.</p>
 
               <div className="image-wrapper"><Img fluid={about3} alt="Sobre a Amore" /></div>
             </div>

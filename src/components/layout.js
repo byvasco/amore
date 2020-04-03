@@ -2,7 +2,6 @@ import React from 'react'
 import { Helmet } from "react-helmet"
 import '../styles/main.scss'
 import Header from './header'
-import HeaderMinimal from './header-floating'
 import Footer from './footer'
 
 const Layout = ({ name, type, title, children }) => {
@@ -15,7 +14,7 @@ const Layout = ({ name, type, title, children }) => {
         <title>{title}</title>
       </Helmet>
 
-      {type === 'home' ? <HeaderMinimal /> : <Header />}
+      {type === 'home' ? <Header type="drawer" /> : <Header />}
 
       {children}
       <Footer />

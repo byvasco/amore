@@ -3,17 +3,15 @@ import { Link } from 'gatsby'
 
 
 const HeaderMinimal = () => (
-  <header className='header-main floating'>
-    <div className='container'>
+  <header className='header-main'>
+    <div className="menu-drawer">
       <button className="button-drawer trigger"></button>
 
-      <div className="menu-drawer">
-        <nav className="links">
-          <Link to="/respeitar" className="button-text">Respeitar</Link>
-          <Link to="/cuidar" className="button-text">Cuidar</Link>
-          <Link to="/proteger" className="button-text">Proteger</Link>
-        </nav>
-      </div>
+      <nav className="links">
+        <Link to="/respeitar" className="respeitar link flex-center"><p className="title title-respeitar-white">Respeitar</p></Link>
+        <Link to="/cuidar" className="cuidar link flex-center"><p className="title title-cuidar-white">Cuidar</p></Link>
+        <Link to="/proteger" className="proteger link flex-center"><p className="title title-proteger-white">Proteger</p></Link>
+      </nav>
     </div>
   </header>
 )

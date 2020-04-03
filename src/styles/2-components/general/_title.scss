@@ -13,14 +13,26 @@
 
 .title-cuidar {
   @include replace-text('titles/pages/title-cuidar.png', $width: 312px, $height: 146px);
+
+  &-white {
+    @include replace-text('titles/pages/title-cuidar-white.png', $width: 312px, $height: 146px);
+  }
 }
 
 .title-respeitar {
   @include replace-text('titles/pages/title-respeitar.png', $width: 446px, $height: 146px);
+
+  &-white {
+    @include replace-text('titles/pages/title-respeitar-white.png', $width: 446px, $height: 146px);
+  }
 }
 
 .title-proteger {
   @include replace-text('titles/pages/title-proteger.png', $width: 424px, $height: 146px);
+
+  &-white {
+    @include replace-text('titles/pages/title-proteger-white.png', $width: 424px, $height: 146px);
+  }
 }
 
 .title-reabilitacao {

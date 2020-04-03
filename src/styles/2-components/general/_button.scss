@@ -16,6 +16,25 @@ button {
     transform: rotate(-5deg);
     opacity: .95;
   }
+
+  &::before {
+    content: '';
+    display: block;
+    @include wh(44px, 40px);
+    @include background('buttons/button-drawer-close.svg');
+    transition: all 120ms;
+    opacity: 0;
+  }
+
+  &.open {
+    &:hover {
+      transform: rotate(5deg);
+    }
+
+    &::before {
+      opacity: 1;
+    }
+  }
 }
 
 .button-social {

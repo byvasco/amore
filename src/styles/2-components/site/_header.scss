@@ -48,18 +48,91 @@
   }
 
   .button-drawer {
-    justify-self: end;
+    @include pos(80px, 540px);
   }
 
   .menu-drawer {
-    display: none;
+    @include wh(500px, 100vh);
+    @include pos(0, 0, $pos: fixed, $z: 999);
+    transform: translateX(100.2%);
+    transition: all 320ms cubic-bezier(0.22, 0.61, 0.36, 1);
+
+    &.open {
+      transform: translateX(0);
+    }
+
+    .links {
+      @include wh(480px, 100vh);
+      @include pos(0, 0);
+      
+      &::before {
+        content: '';
+        display: block;
+        @include background('brushes/brush-drawer.png', $size: 52px 1500px);
+        @include wh(52px, 100vh);
+        @include pos(0, $left: -24px, $z: 99999);
+      }
+
+      .link {
+        @include wh(100%, calc(100vh / 3));
+        position: relative;
+
+        .title {
+          height: 72px;
+          position: relative;
+          transition: all 120ms;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          @include wh(100%, 100%);
+          background-image: linear-gradient(180deg, rgba(0,0,0,0.67) 0%, rgba(0,0,0,0.96) 100%);
+          opacity: .6;
+          @include pos(0, $left: 0);
+          transition: all 120ms;
+        }
+
+        &:hover {
+          .title {
+            transform: scale(1.06);
+          }
+
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+
+      .respeitar {
+        @include background('backgrounds/background-tile-respeitar.jpg', $size: cover);
+      }
+
+      .cuidar {
+        @include background('backgrounds/background-tile-cuidar.jpg', $size: cover);
+      }
+
+      .proteger {
+        @include background('backgrounds/background-tile-proteger.jpg', $size: cover);
+      }
+    }
+
+    // &::before {
+    //   content: '';
+    //   display: block;
+    //   @include wh(100%, 100vh);
+    //   background-color: black;
+    //   opacity: .6;
+    //   @include pos(0, $left: 0, $z: -1);
+    // }
   }
 
-  &.floating {
-    @include pos(0, $pos: fixed, $z: 999);
+  &.drawer {
+    padding: 0;
 
-    .button-drawer {
-      @include pos(0, 0);
+    .menu,
+    .logo {
+      display: none;
     }
   }
 }
