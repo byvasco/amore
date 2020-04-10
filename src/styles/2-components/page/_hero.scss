@@ -26,7 +26,7 @@
   @include mq-max(1200) {
     &::before,
     &::after {
-      size: cover;
+      background-size: cover;
     }
   }
 
