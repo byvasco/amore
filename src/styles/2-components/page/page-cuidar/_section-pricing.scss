@@ -68,4 +68,59 @@
     max-width: 300px;
     text-align: center;
   }
+
+  @include mq-max(1200) {
+    .plans {
+      @include grid(1fr, $gap: 64px);
+    }
+
+    .plan {
+      max-width: $col-4;
+    }
+
+    .plan-middle::before,
+    .plan-middle::after {
+      @include background('brushes/brush-pricing-divider-small-hor.svg', $size: cover);
+      left: 0;
+      @include wh(100%, 3px);
+    }
+    
+    .plan-middle::before {
+      top: -32px;
+    }
+
+    .plan-middle::after {
+      top: 140px;
+    }
+  }
+
+  @include mq-max($break-tablet) {
+    .plans {
+      margin-bottom: 56px;
+    }
+
+    .plan {
+      .main {
+        margin-bottom: 6px;
+      }
+
+      .secondary {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @include mq-max(420) {
+    .plans {
+      row-gap: 48px;
+    }
+
+    .plan-middle::before {
+      top: -24px;
+    }
+
+    .plan-middle::after {
+      top: 132px;
+    }
+  }
 }

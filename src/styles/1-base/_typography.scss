@@ -28,7 +28,7 @@
   }
 
   @include mq-max($break-tablet) {
-    @include font(20, 28, 0);
+    @include font(20, 24, 0);
 
     &-long {
       @include font(20, 28, 0);

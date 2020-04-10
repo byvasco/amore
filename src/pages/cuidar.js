@@ -12,34 +12,24 @@ const Cuidar = () => {
     query {
       image1: file (relativePath: { eq: "page-sections/image-alojamento-1.png" }) {
         childImageSharp {
-          fixed (width: 496, height: 429, quality: 100) {
-            aspectRatio
-            base64
-            width
-            height
-            src
-            srcSet
+          fluid (quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
 
       image2: file (relativePath: { eq: "page-sections/image-alojamento-2.png" }) {
         childImageSharp {
-          fixed (width: 586, height: 440, quality: 100) {
-            aspectRatio
-            base64
-            width
-            height
-            src
-            srcSet
+          fluid (quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
 
-  const imageAlojamento1 = data.image1.childImageSharp.fixed;
-  const imageAlojamento2 = data.image2.childImageSharp.fixed;
+  const imageAlojamento1 = data.image1.childImageSharp.fluid;
+  const imageAlojamento2 = data.image2.childImageSharp.fluid;
 
   return (
     <LayoutMainPage
@@ -57,8 +47,13 @@ const Cuidar = () => {
 
           <div className="content">
             <div className="images grid-2">
-              <Img fixed={imageAlojamento1} className="image" />
-              <Img fixed={imageAlojamento2} className="image" />
+              <div className="left">
+                <Img fluid={imageAlojamento1} className="image" />
+              </div>
+              
+              <div className="right">
+                <Img fluid={imageAlojamento2} className="image" />
+              </div>
             </div>
 
             <div className="features flex-center">
