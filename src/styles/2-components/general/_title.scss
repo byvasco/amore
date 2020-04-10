@@ -77,6 +77,10 @@
   .title-respeitar {
     @include wh(366px, 120px);
   }
+
+  .title-cuidar {
+    @include wh(238px, 120px);
+  }
 }
 
 @include mq-max(570) {
@@ -88,6 +92,10 @@
 
   .title-reabilitacao {
     @include wh(266px, 60px);
+  }
+
+  .title-alojamento {
+    @include wh(238px, 60px);
   }
 
   .title-pricing {

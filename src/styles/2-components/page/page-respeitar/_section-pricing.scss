@@ -74,18 +74,18 @@
 
   @include mq-max($break-tablet) {
     .plans {
-      @include grid(1fr, $justify-i: center, $gap: 48px);
+      @include grid(1fr, $justify-i: center, $gap: 64px);
       margin-bottom: 56px;
 
       &::after {
         transform: rotate(90deg);
-        top: 36px;
+        top: 40px;
       }
     }
 
     .plan {
       .plan-header {
-        margin-bottom: 24px;
+        margin-bottom: 20px;
       }
     }
 

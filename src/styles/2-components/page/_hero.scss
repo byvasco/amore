@@ -23,6 +23,13 @@
     @include pos($bottom: -20px);
   }
 
+  @include mq-max(1200) {
+    &::before,
+    &::after {
+      size: cover;
+    }
+  }
+
   @include mq-max(570) {
     height: 480px;
   }

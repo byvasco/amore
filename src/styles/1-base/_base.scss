@@ -22,7 +22,7 @@ body {
   overflow-x: hidden;
   font-family: $font-main;
   font-weight: $weight-text;
-  @include background('backgrounds/background-light.png', $repeat: repeat);
+  @include background('backgrounds/background-light.png', $size: 100%, $repeat: repeat);
 }
 
 @-webkit-keyframes fadeIn {
