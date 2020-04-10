@@ -8,7 +8,7 @@
   padding: 40px 0;
 
   .container {
-    @include grid(1fr 1fr 1fr, $align: center);
+    @include grid(1fr 70% 1fr, $align: center);
   }
 
   .menu {
@@ -133,6 +133,30 @@
     .menu,
     .logo {
       display: none;
+    }
+  }
+
+  @include mq-max($break-tablet) {
+    .container {
+      @include grid(1fr, $justify-i: center);
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .button-drawer {
+      right: 526px;
+    }
+  }
+
+  @include mq-max(570) {
+    .logo {
+      height: 100px;
+    }
+
+    .button-drawer {
+      top: 70px;
     }
   }
 }

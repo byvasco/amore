@@ -26,6 +26,26 @@
   &-super {
     @include font(28, 32, -0.45, 700);
   }
+
+  @include mq-max($break-tablet) {
+    @include font(20, 28, 0);
+
+    &-long {
+      @include font(20, 28, 0);
+    }
+
+    &-large {
+      @include font(22, 28, 0.02);
+    }
+
+    &-bold {
+      @include font(20, 28, 0, 700);
+    }
+
+    &-super {
+      @include font(26, 28, -0.42, 800);
+    }
+  }
 }
 
 p {
@@ -71,6 +91,10 @@ a {
 .quote {
   @include font(28, 32, 0.3, 400);
   font-style: italic;
+
+  @include mq-max($break-tablet) {
+    @include font(26, 32, 0.1, 400);
+  }
 }
 
 // Titles

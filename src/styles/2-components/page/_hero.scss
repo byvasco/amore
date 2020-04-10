@@ -22,6 +22,10 @@
     @include background('brushes/brush-hero-bottom.png', $size: 120%);
     @include pos($bottom: -20px);
   }
+
+  @include mq-max(570) {
+    height: 480px;
+  }
 }
 
 // .page-main

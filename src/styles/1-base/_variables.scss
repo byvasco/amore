@@ -56,6 +56,8 @@ $col-8: ($column-width * 8) + ($gap-width * 7);
 $col-9: ($column-width * 9) + ($gap-width * 9);
 $col-10: ($column-width * 10) + ($gap-width * 9);
 
+$break-tablet: 768;
+
 // Fonts
 $font-main: 'Crimson Pro', Georgia, serif;
 $font-secondary: 'Barlow Semi Condensed', system-ui, sans-serif;

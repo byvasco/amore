@@ -31,13 +31,21 @@
 
 // Sets position, coordinates and z-index value.
 // Defaults to position: absolute
-@mixin pos($top: null, $right: null, $bottom: null, $left: null, $pos: absolute, $z: null) {
-  position: $pos;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
-  z-index: $z;
+@mixin pos($top: null, $right: null, $bottom: null, $left: null, $pos: absolute, $z: null, $reset: null) {
+  @if ($reset != true) {
+    position: $pos;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: $z;
+  } @else {
+    position: relative;
+    top: initial;
+    bottom: initial;
+    left: initial;
+    right: initial;
+  } 
 }
 
 // Sets display to flex, and assigns other properties
@@ -52,12 +60,13 @@
 }
 
 // Sets display to grid and assigns other properties
-@mixin grid($cols: null, $rows: null, $gap: 30px, $justify: null, $align: null) {
+@mixin grid($cols: null, $rows: null, $gap: 30px, $justify: null, $justify-i: null, $align: null) {
   display: grid;
   grid-gap: $gap;
   grid-template-columns: $cols;
   grid-template-rows: $rows;
   justify-content: $justify;
+  justify-items: $justify-i;
   align-items: $align;
 }
 

@@ -15,4 +15,17 @@
     max-width: 450px;
     text-align: center;
   }
+
+  @include mq-max(570) {
+    padding: 56px 0 72px;
+
+    .title,
+    .content {
+      margin-bottom: 24px;
+    }
+
+    .content {
+      max-width: 300px;
+    }
+  }
 }

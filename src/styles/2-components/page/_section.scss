@@ -12,7 +12,7 @@
       content: '';
       display: block;
       @include wh(100%, 48px);
-      @include background('brushes/brush-section-divider.png', $size: cover);
+      @include background('brushes/brush-section-divider.png', -20px, $size: cover);
       @include pos(-148px);
     }
   }
@@ -28,6 +28,39 @@
       max-width: $col-6;
       margin-bottom: 32px;
       text-align: center;
+    }
+  }
+
+  @include mq-max(1200) {
+    .container {
+      &::before {
+        background-position: center;
+      }
+    }
+  }
+
+  @include mq-max($break-tablet) {
+    padding: 98px 0 80px;
+
+    .container::before {
+      top: -98px;
+    }
+
+    .section-header {
+      margin-bottom: 64px;
+    }
+  }
+
+  @include mq-max(570) {
+    .section-header {
+      .title {
+        margin-bottom: 16px;
+      }
+
+      .intro {
+        max-width: 300px;
+        margin-bottom: 24px;
+      }
     }
   }
 }

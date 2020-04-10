@@ -10,50 +10,35 @@ import Contacts from '../components/sections/section-contacts'
 const Respeitar = () => {
   const data = useStaticQuery(graphql`
     query {
-      image1: file (relativePath: { eq: "page-sections/image-reabilitacao-1.png" }) {
+      image1: file (relativePath: {eq: "page-sections/image-reabilitacao-1.png"}) {
         childImageSharp {
-          fixed (width: 708, height: 432, quality: 100) {
-            aspectRatio
-            base64
-            width
-            height
-            src
-            srcSet
+          fluid (quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
 
-      image2: file (relativePath: { eq: "page-sections/image-reabilitacao-2.png" }) {
+      image2: file (relativePath: {eq: "page-sections/image-reabilitacao-2.png"}) {
         childImageSharp {
-          fixed (width: 630, height: 402, quality: 100) {
-            aspectRatio
-            base64
-            width
-            height
-            src
-            srcSet
+          fluid (quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       
-      image3: file (relativePath: { eq: "page-sections/image-reabilitacao-3.png" }) {
+      image3: file (relativePath: {eq: "page-sections/image-reabilitacao-3.png"}) {
         childImageSharp {
-          fixed (width: 516, height: 320, quality: 100) {
-            aspectRatio
-            base64
-            width
-            height
-            src
-            srcSet
+          fluid (quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `);
   
-  const imageReabilitacao1 = data.image1.childImageSharp.fixed;
-  const imageReabilitacao2 = data.image2.childImageSharp.fixed;
-  const imageReabilitacao3 = data.image3.childImageSharp.fixed;
+  const imageReabilitacao1 = data.image1.childImageSharp.fluid;
+  const imageReabilitacao2 = data.image2.childImageSharp.fluid;
+  const imageReabilitacao3 = data.image3.childImageSharp.fluid;
   
 
   return (
@@ -77,7 +62,7 @@ const Respeitar = () => {
                 <p className="body-long">O nosso trabalho é compreender o medo do teu animal e ajudar a <strong>transformá-lo ou aprender a viver com ele</strong>, sem que isso o afete ou afete quem o rodeia.</p>
               </div>
 
-              <Img fixed={imageReabilitacao1} className="image" />
+              <Img fluid={imageReabilitacao1} className="image" />
             </div>
 
             <div className="row row-quote flex-center">
@@ -91,7 +76,7 @@ const Respeitar = () => {
                 <p className="body-long">Estudamos e desenvolvemos-nos de forma a estarmos atualizados com os mais recentes <strong>estudos científicos sobre comportamento, saúde e bem-estar</strong>.</p>
               </div>
 
-              <Img fixed={imageReabilitacao2} className="image" />
+              <Img fluid={imageReabilitacao2} className="image" />
             </div>
 
             <div className="row grid-2">
@@ -100,7 +85,7 @@ const Respeitar = () => {
                 <p className="body-long">Juntos descobriremos e construiremos o caminho que tornará o teu animal <strong>tranquilo, confiante e amável</strong>.</p>
               </div>
 
-              <Img fixed={imageReabilitacao3} className="image" />
+              <Img fluid={imageReabilitacao3} className="image" />
             </div>
           </div>
         </div>

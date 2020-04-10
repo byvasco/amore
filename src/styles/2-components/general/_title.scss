@@ -66,3 +66,45 @@
 .title-contacts {
   @include replace-text('titles/title-contacts.png', $width: 349px, $height: 164px);
 }
+
+@include mq-max($break-tablet) {
+  .title-cuidar,
+  .title-respeitar,
+  .title-proteger {
+    height: 120px
+  }
+
+  .title-respeitar {
+    @include wh(366px, 120px);
+  }
+}
+
+@include mq-max(570) {
+  .title-cuidar,
+  .title-respeitar,
+  .title-proteger {
+    height: 100px
+  }
+
+  .title-reabilitacao {
+    @include wh(266px, 60px);
+  }
+
+  .title-pricing {
+    @include wh(304px, 64px);
+  }
+
+  .title-contacts {
+    @include wh(255px, 120px);
+  }
+}
+
+@include mq-max(420) {
+  .title-respeitar {
+    @include wh(305px, 100px);
+  }
+
+  .title-pricing {
+    height: 56px;
+  }
+}

@@ -5,6 +5,7 @@
 
 .reabilitacao {
   .rows {
+    width: 100%;
     @include grid(1fr, $gap: 64px)
   }
   
@@ -15,6 +16,10 @@
       p + p {
         margin-top: 16px;
       }
+    }
+
+    .image {
+      width: 100%;
     }
 
     &.inverted {
@@ -64,9 +69,53 @@
         justify-self: center;
         max-width: $col-4;
       }
+    }
+  }
+
+  @include mq-max(1200) {
+    .row {
+      &:first-child {
+        .image {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @include mq-max($break-tablet) {
+    .rows {
+      row-gap: 56px;
+    }
+
+    .row {
+      @include grid(1fr, $justify-i: center, $gap: 20px);
+
+      .content {
+        max-width: 335px;
+      }
 
       .image {
-        justify-self: end;
+        width: calc(100% + 24px);
+      }
+
+      &:first-child,
+      &:last-child {
+        margin-bottom: 0;
+
+        .image {
+          order: -1;
+        }
+      }
+
+      &:nth-child(3),
+      &:last-child {
+        .image {
+          margin-left: 0;
+        }
+
+        .content {
+          max-width: 335px;
+        }
       }
     }
   }

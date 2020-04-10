@@ -11,12 +11,12 @@
     display: block;
     @include wh(682px, 114px);
     @include background('brushes/brush-page-title.svg');
-    margin-top: -64px;
+    margin-top: -72px;
     position: relative;
   }
 
   .container {
-    margin-top: -40px;
+    margin-top: -32px;
   }
 
   .page-title {
@@ -46,6 +46,46 @@
     &::after {
       right: -58px;
       transform: rotate(180deg);
+    }
+  }
+  
+  @include mq-max(850) {
+    .page-quote {
+      @include flex($align: center);
+      max-width: 540px;
+      
+      &::before,
+      &::after {
+        @include pos($reset: true);
+        flex-shrink: 0;
+        margin-top: 0;
+      }
+
+      &::before {
+        margin-right: 24px;
+      }
+
+      &::after {
+        margin-left: 24px;
+      }
+    }
+  }
+
+  @include mq-max($break-tablet) {
+    padding-bottom: 64px;
+
+    &::before {
+      width: 100%;
+    }
+
+    .page-title {
+      margin-bottom: 32px;
+    }
+  }
+
+  @include mq-max(570) {
+    .container {
+      margin-top: -64px;
     }
   }
 }
