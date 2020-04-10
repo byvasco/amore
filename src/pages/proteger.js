@@ -10,65 +10,40 @@ const Proteger = () => {
     query {
       image1: file (relativePath: { eq: "page-sections/image-santuario-1.png" }) {
         childImageSharp {
-          fixed (width: 480, height: 560, quality: 100) {
-            aspectRatio
-            base64
-            width
-            height
-            src
-            srcSet
+          fluid (quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
 
       image2: file (relativePath: { eq: "page-sections/image-santuario-2.png" }) {
         childImageSharp {
-          fixed (width: 490, height: 320, quality: 100) {
-            aspectRatio
-            base64
-            width
-            height
-            src
-            srcSet
+          fluid (quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
 
       image3: file (relativePath: { eq: "page-sections/image-santuario-3.png" }) {
         childImageSharp {
-          fixed (width: 556, height: 400, quality: 100) {
-            aspectRatio
-            base64
-            width
-            height
-            src
-            srcSet
+          fluid (quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
 
       image4: file (relativePath: { eq: "page-sections/image-santuario-4.png" }) {
         childImageSharp {
-          fixed (width: 586, height: 470, quality: 100) {
-            aspectRatio
-            base64
-            width
-            height
-            src
-            srcSet
+          fluid (quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
 
       image5: file (relativePath: { eq: "page-sections/image-hopeful-1.png" }) {
         childImageSharp {
-          fixed (width: 582, height: 400, quality: 100) {
-            aspectRatio
-            base64
-            width
-            height
-            src
-            srcSet
+          fluid (quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -93,11 +68,11 @@ const Proteger = () => {
   `)
 
 
-  const imageSantuario1 = data.image1.childImageSharp.fixed;
-  const imageSantuario2 = data.image2.childImageSharp.fixed;
-  const imageSantuario3 = data.image3.childImageSharp.fixed;
-  const imageSantuario4 = data.image4.childImageSharp.fixed;
-  const imageHopeful1 = data.image5.childImageSharp.fixed;
+  const imageSantuario1 = data.image1.childImageSharp.fluid;
+  const imageSantuario2 = data.image2.childImageSharp.fluid;
+  const imageSantuario3 = data.image3.childImageSharp.fluid;
+  const imageSantuario4 = data.image4.childImageSharp.fluid;
+  const imageHopeful1 = data.image5.childImageSharp.fluid;
   const imagesAdoption = data.adoption.edges;
 
   return (
@@ -115,12 +90,14 @@ const Proteger = () => {
             button="false"
           />
 
-          <div className="content">
+          <div className="rows">
             <div className="row grid-2">
-              <Img fixed={imageSantuario1} className="left image" />
+              <div className="left flex-center">
+                <Img fluid={imageSantuario1} className="image" />
+              </div>
               
               <div className="right flex-center">
-                <Img fixed={imageSantuario2} className="image" />
+                <Img fluid={imageSantuario2} className="image" />
                 <p className="body-long">Aqui todos são iguais, com histórias de vida diferentes. Em comum, todos tiveram a experiência do mau trato, do medo, do frio, da dor e do desrespeito do Homem.</p>
               </div>
             </div>
@@ -130,8 +107,8 @@ const Proteger = () => {
             </div>
 
             <div className="row grid-2">
-              <Img fixed={imageSantuario3} className="image" />
-              <Img fixed={imageSantuario4} className="image" />
+              <Img fluid={imageSantuario3} className="image" />
+              <Img fluid={imageSantuario4} className="image" />
             </div>
 
             <div className="row flex-center">
@@ -160,7 +137,7 @@ const Proteger = () => {
           />
 
           <div className="row flex-center">
-            <Img fixed={imageHopeful1} className="image" />
+            <Img fluid={imageHopeful1} className="image" />
           </div>
 
           <div className="row flex-center">

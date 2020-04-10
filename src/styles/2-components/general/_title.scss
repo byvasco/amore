@@ -68,18 +68,16 @@
 }
 
 @include mq-max($break-tablet) {
-  .title-cuidar,
-  .title-respeitar,
-  .title-proteger {
-    height: 120px
-  }
-
   .title-respeitar {
     @include wh(366px, 120px);
   }
 
   .title-cuidar {
     @include wh(238px, 120px);
+  }
+
+  .title-proteger {
+    @include wh(348px, 120px);
   }
 }
 
@@ -98,6 +96,22 @@
     @include wh(238px, 60px);
   }
 
+  .title-santuario {
+    @include wh(214px, 110px);
+  }
+
+  .title-hopeful {
+    @include wh(229px, 96px);
+  }
+
+  .title-adocao {
+    @include wh(253px, 56px);
+  }
+
+  .title-adocao-contact {
+    @include wh(375px, 43px);
+  }
+
   .title-pricing {
     @include wh(304px, 64px);
   }
@@ -114,5 +128,9 @@
 
   .title-pricing {
     height: 56px;
+  }
+
+  .title-adocao-contact {
+    @include wh(300px, 34px);
   }
 }

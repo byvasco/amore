@@ -62,11 +62,11 @@
       }
 
       &::before {
-        margin-right: 24px;
+        margin: 0 22px 0 -10px;
       }
 
       &::after {
-        margin-left: 24px;
+        margin: 0 -10px 0 22px;
       }
     }
   }

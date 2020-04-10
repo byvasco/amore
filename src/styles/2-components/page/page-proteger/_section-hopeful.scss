@@ -3,9 +3,13 @@
  * Section - Projecto Hopeful
  */
 
-.hopeful {
+.hopeful {  
   .row:nth-child(2) {
     margin-bottom: 64px;
+  }
+
+  .image {
+    @include wh(100%, $max-w: $col-6);
   }
 
   .service-items {
@@ -39,6 +43,25 @@
 
     li:last-child p::before {
       @include background('titles/title-number-3.svg', $size: 100%)
+    }
+  }
+
+  @include mq-max(570) {
+    .row:nth-child(2) {
+      margin-bottom: 48px;
+    }
+
+    .service-items {
+      max-width: 356px;
+
+      li p::before {
+        @include wh(28px, 41px);
+        margin-right: 20px;
+      }
+
+      li + li {
+        margin-top: 24px;
+      }
     }
   }
 }

@@ -10,28 +10,36 @@
   
   .row {
     align-items: center;
+    justify-items: center;
 
     p + p {
       margin-top: 16px;
     }
 
+    .image {
+      width: 100%;
+    }
+
     &:first-child {
       align-items: start;
-      margin-bottom: 80px;
 
       .image,
       .right {
         justify-self: center;
       }
 
-      .left.image {
-        margin-top: 24px;
+      .left {
+        @include wh(100%, $max-w: 480px);
+
+        .image {
+          margin-top: 32px;
+        }
       }
 
       .right {
         .image {
-          margin-top: -28px;
           margin-bottom: 80px;
+          width: calc(100% + 100px);
         }
         
         p {
@@ -41,7 +49,7 @@
     }
 
     &.row-quote {
-      margin-bottom: 100px;
+      margin-bottom: 24px;
 
       .quote {
         @include replace-text('text/text-quote-santuario.png', $size: 100%, $width: 521px, $height: 194px);
@@ -49,7 +57,7 @@
     }
 
     &:nth-child(3) {
-      margin-bottom: 64px;
+      column-gap: 16px;
     }
     
     &:last-child {
@@ -78,6 +86,104 @@
           padding: 36px 0 37px;
         }
       }
+    }
+  }
+
+  @include mq-max(1000) {
+    .row:first-child {
+      .right,
+      .left {
+        .image {
+          width: calc(100% + 24px);
+        }
+
+        p {
+          padding-left: 32px;
+        }
+      }
+    }
+  }
+
+  @include mq-max($break-tablet) {
+    .rows {
+      row-gap: 56px;
+    }
+
+    .row {
+      &:first-child {
+        @include grid(1fr, $gap: 24px);
+
+        .left .image {
+          margin: 0;
+        }
+
+        .right {
+          order: -1;
+
+          .image {
+            margin-bottom: 32px;
+          }
+
+          p {
+            padding-left: 0;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        @include grid(1fr, $gap: 10px);
+
+        .image:first-child {
+          max-width: 320px;
+          justify-self: start;
+        }
+
+        .image:last-child {
+          max-width: 340px;
+          justify-self: end;
+        }
+      }
+    }
+  }
+
+  @include mq-max(570) {
+    .row.row-quote {
+      margin-bottom: 0;
+
+      .quote {
+        @include wh(400px, 150px);
+      }
+    }
+
+    .row:last-child {
+      .note {
+        flex-direction: column;
+        padding: 8px 48px 40px;
+        width: calc(100% + 24px);
+        margin: 48px 0 0 -12px;
+
+        &::before {
+          margin-right: 0;
+          padding: 24px 0;
+          @include wh(55px, 64px);
+        }
+
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  @include mq-max(460) {
+    .row.row-quote .quote {
+      @include wh(320px, 120px);
+    }
+  }
+
+  @include mq-max(400) {
+    .row.row-quote .quote {
+      width: 100%;
     }
   }
 }

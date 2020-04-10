@@ -44,6 +44,36 @@
     .section-title,
     .content {
       margin-bottom: 32px;
+      text-align: center;
+    }
+  }
+
+  @include mq-max($break-tablet) {
+    padding: 40px 0 80px;
+  }
+
+  @include mq-max(570) {
+    .section-title.title-adocao {
+      margin-bottom: 40px;
+    }
+
+    .animals-list {
+      @include grid(1fr 1fr, $justify-i: center, $gap: 40px);
+      column-gap: 20px;
+      margin-bottom: 100px;
+    }
+
+    .animal {
+      &-image {
+        margin-bottom: 8px;
+      }
+    }
+
+    .contact {
+      .section-title,
+      .content {
+        margin-bottom: 24px;
+      }
     }
   }
 }
