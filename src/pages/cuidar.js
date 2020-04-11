@@ -36,6 +36,7 @@ const Cuidar = () => {
       name="cuidar"
       title="Cuidar"
       quote="A maior violência para com um animal não humano acontece quando o tratamos como um ser humano."
+      locked="true"
     >
       <section className="main-section alojamento">
         <div className="container flex-center">

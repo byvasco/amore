@@ -74,6 +74,20 @@ button {
     @include pos(0, $left: 0, $z: -1);
   }
 
+  &.messenger {
+    text-align: left;
+    @include flex(center, center);
+
+    &::after {
+      content: '';
+      display: block;
+      @include wh(18px, 18px);
+      @include background('icons/icon-messenger.svg', $size: cover);
+      margin-right: 10px;
+      order: -1;
+    }
+  }
+
   &-dark {
     @extend .button;
 
@@ -91,20 +105,6 @@ button {
 
       &:hover {
         transform: translateY(2px);
-      }
-    }
-
-    &.messenger {
-      text-align: left;
-      @include flex(center, center);
-
-      &::after {
-        content: '';
-        display: block;
-        @include wh(18px, 18px);
-        @include background('icons/icon-messenger.svg', $size: cover);
-        margin-right: 10px;
-        order: -1;
       }
     }
   }

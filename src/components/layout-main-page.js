@@ -1,9 +1,9 @@
 import React from 'react'
 import Layout from './layout'
 
-const LayoutMainPage = ({ name, title, quote, children }) => {
+const LayoutMainPage = ({ name, title, quote, locked, children }) => {
   return (
-    <Layout name={name} title={title} type="main">
+    <Layout name={name} title={title} type="main" locked={locked}>
       <section className={"page-hero " + name}>
         <div className="hero-image"></div>
       </section>

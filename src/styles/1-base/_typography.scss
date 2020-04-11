@@ -24,7 +24,7 @@
   }
 
   &-super {
-    @include font(28, 32, -0.45, 700);
+    @include font(28, 28, -0.45, 700);
   }
 
   @include mq-max($break-tablet) {

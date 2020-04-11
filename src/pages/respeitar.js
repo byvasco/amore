@@ -10,7 +10,7 @@ import Contacts from '../components/sections/section-contacts'
 const Respeitar = () => {
   const data = useStaticQuery(graphql`
     query {
-      image1: file (relativePath: {eq: "page-sections/image-reabilitacao-1.png"}) {
+      image1: file (relativePath: {eq: "page-sections/image-reabilitacao-1.jpg"}) {
         childImageSharp {
           fluid (quality: 100) {
             ...GatsbyImageSharpFluid
@@ -18,7 +18,7 @@ const Respeitar = () => {
         }
       }
 
-      image2: file (relativePath: {eq: "page-sections/image-reabilitacao-2.png"}) {
+      image2: file (relativePath: {eq: "page-sections/image-reabilitacao-2.jpg"}) {
         childImageSharp {
           fluid (quality: 100) {
             ...GatsbyImageSharpFluid
@@ -26,7 +26,7 @@ const Respeitar = () => {
         }
       }
       
-      image3: file (relativePath: {eq: "page-sections/image-reabilitacao-3.png"}) {
+      image3: file (relativePath: {eq: "page-sections/image-reabilitacao-3.jpg"}) {
         childImageSharp {
           fluid (quality: 100) {
             ...GatsbyImageSharpFluid
@@ -46,6 +46,7 @@ const Respeitar = () => {
       name="respeitar"
       title="Respeitar"
       quote="A maior arrogância de alguns Homens, está na crença de que sabem mais sobre os outros animais, do que eles próprios."
+      locked="true"
     >
       <section className="main-section reabilitacao">
         <div className="container flex-center">
