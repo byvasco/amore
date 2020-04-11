@@ -1,9 +1,12 @@
 import React from 'react'
 import Layout from './layout'
+import SEO from './SEO'
 
 const LayoutMainPage = ({ name, title, quote, locked, children }) => {
   return (
     <Layout name={name} title={title} type="main" locked={locked}>
+      <SEO title={title} />
+
       <section className={"page-hero " + name}>
         <div className="hero-image"></div>
       </section>

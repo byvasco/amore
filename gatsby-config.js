@@ -6,7 +6,10 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Amorempatia`
+    title: `Amore – Centro de Proteção e Reabilitação Animal`,
+    titleTemplate: `%s – Amore`,
+    description: `Somos amor, paciência, espaço e empatia. O que somos, usamos para que animais não humanos recuperem a tranquilidade, confiança e autonomia.`,
+    url: `https://amorempatia.org`,
   },
   
   plugins: [
