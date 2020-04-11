@@ -60,9 +60,10 @@
 }
 
 // Sets display to grid and assigns other properties
-@mixin grid($cols: null, $rows: null, $gap: 30px, $justify: null, $justify-i: null, $align: null) {
+@mixin grid($cols: null, $rows: null, $gap: 30px, $gap-r: 30px, $justify: null, $justify-i: null, $align: null) {
   display: grid;
-  grid-gap: $gap;
+  column-gap: $gap;
+  row-gap: $gap-r;
   grid-template-columns: $cols;
   grid-template-rows: $rows;
   justify-content: $justify;

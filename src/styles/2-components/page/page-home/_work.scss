@@ -20,142 +20,191 @@
   .tiles {
     column-gap: 14px;
     margin-bottom: 80px;
+  }
 
-    .tile {
-      @include wh(100%, 580px);
+  .tile {
+    @include wh(100%, 580px);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      display: block;
+      @include wh(100%, 100%);
+      @include pos(0, $left: 0);
+      background-image: linear-gradient(180deg, rgba(0,0,0,0.27) 0%, rgba(0,0,0,0.96) 100%);
+      opacity: .5;
+      transition: all 120ms;
+    }
+
+    .content {
       position: relative;
-      overflow: hidden;
+      z-index: 9;
 
-      &::before {
-        content: '';
-        display: block;
-        @include wh(100%, 100%);
-        @include pos(0, $left: 0);
-        background-image: linear-gradient(180deg, rgba(0,0,0,0.27) 0%, rgba(0,0,0,0.96) 100%);
-        opacity: .5;
+      .description {
+        text-align: center;
+        opacity: 0;
         transition: all 120ms;
       }
+    }
 
-      .content {
-        position: relative;
-        z-index: 9;
+    .brush-hor::before,
+    .brush-hor::after {
+      content: '';
+      display: block;
+      @include wh(1400px, 48px);
+    }
 
-        .description {
-          text-align: center;
-          opacity: 0;
-          transition: all 120ms;
+    .brush-ver::before,
+    .brush-ver::after {
+      content: '';
+      display: block;
+      @include wh(1400px, 48px);
+    }
+
+    .brush-hor::before {
+      @include background('brushes/brush-hero-top.png', $size: 100%);
+      @include pos(-24px);
+    }
+
+    .brush-hor::after {
+      @include background('brushes/brush-hero-bottom.png', $size: 100%);
+      @include pos($bottom: -36px);
+    }
+
+    .brush-ver::before {
+      @include background('brushes/brush-hero-top.png', $size: 100%);
+      @include pos($left: -703px);
+      transform: rotate(90deg);
+    }
+
+    .brush-ver::after {
+      @include background('brushes/brush-hero-bottom.png', $size: 100%);
+      @include pos($right: -713px);
+      transform: rotate(-90deg);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        &::before {
+          opacity: 1;
         }
-      }
 
-      .brush-hor::before,
-      .brush-hor::after {
-        content: '';
-        display: block;
-        @include wh(1400px, 48px);
-      }
-
-      .brush-ver::before,
-      .brush-ver::after {
-        content: '';
-        display: block;
-        @include wh(1400px, 48px);
-      }
-
-      .brush-hor::before {
-        @include background('brushes/brush-hero-top.png', $size: 100%);
-        @include pos(-20px);
-      }
-
-      .brush-hor::after {
-        @include background('brushes/brush-hero-bottom.png', $size: 100%);
-        @include pos($bottom: -20px);
-      }
-
-      .brush-ver::before {
-        @include background('brushes/brush-hero-top.png', $size: 100%);
-        @include pos($left: -704px);
-        transform: rotate(90deg);
-      }
-
-      .brush-ver::after {
-        @include background('brushes/brush-hero-bottom.png', $size: 100%);
-        @include pos($right: -704px);
-        transform: rotate(-90deg);
-      }
-
-      @media (hover: hover) {
-        &:hover {
-          &::before {
+        .content {
+          .description {
             opacity: 1;
-          }
-
-          .content {
-            .description {
-              opacity: 1;
-              margin-top: 16px;
-            }
+            margin-top: 16px;
           }
         }
       }
     }
+  }
 
-    .respeitar {
-      @include background('backgrounds/background-tile-respeitar.jpg', $size: cover);
+  .respeitar {
+    @include background('backgrounds/background-tile-respeitar.jpg', $size: cover);
 
-      .title {
-        @include replace-text('titles/pages/title-respeitar-white.png', $width: 269px, $height: 88px);
-      }
-
-      .brush-hor::before,
-      .brush-hor::after {
-        left: -90px;
-      }
-
-      .brush-ver::before,
-      .brush-ver::after {
-        top: -60px;
-      }
+    .title {
+      @include replace-text('titles/pages/title-respeitar-white.png', $width: 269px, $height: 88px);
     }
 
-    .cuidar {
-      @include background('backgrounds/background-tile-cuidar.jpg', $size: cover);
-
-      .title {
-        @include replace-text('titles/pages/title-cuidar-white.png', $width: 188px, $height: 88px);
-      }
-
-      .brush-hor::before,
-      .brush-hor::after {
-        left: -330px;
-      }
-
-      .brush-ver::before,
-      .brush-ver::after {
-        top: 0px;
-      }
+    .brush-hor::before,
+    .brush-hor::after {
+      left: -180px;
     }
 
-    .proteger {
-      @include background('backgrounds/background-tile-proteger.jpg', $size: cover);
+    .brush-ver::before,
+    .brush-ver::after {
+      top: -250px;
+    }
+  }
 
-      .title {
-        @include replace-text('titles/pages/title-proteger-white.png', $width: 256px, $height: 88px);
-      }
+  .cuidar {
+    @include background('backgrounds/background-tile-cuidar.jpg', $size: cover);
 
-      .brush-hor::before,
-      .brush-hor::after {
-        left: -220px;
-      }
+    .title {
+      @include replace-text('titles/pages/title-cuidar-white.png', $width: 188px, $height: 88px);
+    }
 
-      .brush-ver::before,
-      .brush-ver::after {
-        top: -60px;
-      }
+    .brush-hor::before,
+    .brush-hor::after {
+      left: -200px;
+    }
+
+    .brush-ver::before,
+    .brush-ver::after {
+      top: -180px;
+    }
+  }
+
+  .proteger {
+    @include background('backgrounds/background-tile-proteger.jpg', $size: cover);
+
+    .title {
+      @include replace-text('titles/pages/title-proteger-white.png', $width: 256px, $height: 88px);
+    }
+
+    .brush-hor::before,
+    .brush-hor::after {
+      left: -220px;
+    }
+
+    .brush-ver::before,
+    .brush-ver::after {
+      top: -60px;
     }
   }
 
   .quote {
     justify-self: center;
     @include replace-text('text/text-quote-work.png', $width: 491px, $height: 120px);
+  }
+
+  @include mq-max($break-tablet) {
+    .intro {
+      padding: 80px 0 40px;
+
+      .title {
+        margin-bottom: 24px;
+      }
+
+      .content {
+        max-width: 375px;
+      }
+    }
+
+    .tiles {
+      @include grid(1fr, $gap-r: 8px, $justify-i: center);
+      width: calc(100% + 24px);
+      margin-bottom: 56px;
+    }
+
+    .tile {
+      @include wh(100%, 230px, $max-w: 500px);
+      background-size: 100%;
+
+      .content {
+        margin-top: 32px;
+
+        .title {
+          height: 80px;
+        }
+      }
+    }
+
+    .respeitar {
+      background-position: 0px 30%;
+    }
+
+    .cuidar {
+      background-position: 0px 52%;
+    }
+
+    .proteger {
+      background-position: 0px 62%;
+    }
+
+    .quote {
+      @include wh(100%, 98px, 400px);
+    }
   }
 }

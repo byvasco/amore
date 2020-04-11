@@ -8,22 +8,52 @@
   @include background('heros/background-hero-home.jpg', $pos-y: bottom, $size: cover);
 
   .container {
-    height: 100%;
+    padding-top: 56px;
   }
 
-  .hero-logo {
-    margin-bottom: 64px;
+  .logo {
+    @include wh(115px, 134px);
+    margin-bottom: 100px;
   }
 
   .title {
-    @include replace-text('titles/title-home-intro.png', $width: 556px, $height: 120px);
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 
   .intro {
     color: get-color(text, white);
     text-align: center;
     max-width: $col-6;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+  }
+
+  @include mq-max($break-tablet) {
+    .intro {
+      max-width: 540px;
+    }
+  }
+
+  @include mq-max(570) {
+    height: 680px;
+
+    .logo {
+      height: 120px;
+      margin-bottom: 64px;
+    }
+
+    .title {
+      @include wh(340px, 151px);
+      margin-bottom: 8px;
+    }
+
+    .intro {
+      margin-bottom: 24px;
+    }
+  }
+
+  @include mq-max(374) {
+    .title {
+      width: 100%;
+    }
   }
 }

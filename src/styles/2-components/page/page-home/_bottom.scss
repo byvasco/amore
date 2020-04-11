@@ -6,6 +6,7 @@
 .bottom {
   margin-top: -200px;
   position: relative;
+  display: none;
 
   &::after {
     content: '';

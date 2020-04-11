@@ -3,6 +3,10 @@
  * Titles
  */
 
+.title-home-hero {
+  @include replace-text('titles/title-home-hero.png', $width: 428px, $height: 190px);
+}
+
 .title-trabalho {
   @include replace-text('titles/title-trabalho.png', $width: 261px, $height: 120px);
 }
@@ -78,6 +82,14 @@
 
   .title-proteger {
     @include wh(348px, 120px);
+  }
+
+  .title-trabalho {
+    @include wh(226px, 104px);
+  }
+
+  .title-sobre {
+    @include wh(183px, 104px);
   }
 }
 

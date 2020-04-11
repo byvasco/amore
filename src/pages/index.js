@@ -9,19 +9,6 @@ import Contacts from '../components/sections/section-contacts'
 const Home = () => {
   const data = useStaticQuery(graphql`
     query {
-      logo: file (relativePath: { eq: "logos/logo-white.png" }) {
-        childImageSharp {
-          fixed (width: 121, height: 140, quality: 100) {
-            aspectRatio
-            base64
-            width
-            height
-            src
-            srcSet
-          }
-        }
-      }
-
       gallery1: file (relativePath: { eq: "page-sections/image-home-gallery-1.png" }) {
         childImageSharp {
           fluid (maxWidth: 400, quality: 100) {
@@ -54,7 +41,7 @@ const Home = () => {
         }
       }
 
-      about1: file (relativePath: { eq: "page-sections/image-about-1.png" }) {
+      about1: file (relativePath: { eq: "page-sections/image-about-1.jpg" }) {
         childImageSharp {
           fluid (quality: 100) {
             ...GatsbyImageSharpFluid
@@ -62,7 +49,7 @@ const Home = () => {
         }
       }
 
-      about2: file (relativePath: { eq: "page-sections/image-about-2.png" }) {
+      about2: file (relativePath: { eq: "page-sections/image-about-2.jpg" }) {
         childImageSharp {
           fluid (quality: 100) {
             ...GatsbyImageSharpFluid
@@ -70,7 +57,7 @@ const Home = () => {
         }
       }
 
-      about3: file (relativePath: { eq: "page-sections/image-about-3.png" }) {
+      about3: file (relativePath: { eq: "page-sections/image-about-3.jpg" }) {
         childImageSharp {
           fluid (quality: 100) {
             ...GatsbyImageSharpFluid
@@ -88,7 +75,6 @@ const Home = () => {
     }
   `)
 
-  const imageLogo = data.logo.childImageSharp.fixed;
   const gallery1 = data.gallery1.childImageSharp.fluid;
   const gallery2 = data.gallery2.childImageSharp.fluid;
   const gallery3 = data.gallery3.childImageSharp.fluid;
@@ -102,9 +88,10 @@ const Home = () => {
     <Layout type="home" title="Amore">
       <section className="hero">
         <div className="container flex-center">
-          <Img fixed={imageLogo} className="hero-logo" alt="Amore" draggable="false" />
-          <h1 className="title">Somos amor, paciência, espaço e empatia.</h1>
-          <p className="intro body-large">O que somos, usamos para que animais não humanos recuperem a tranquilidade, confiança e autonomia</p>
+          <Link to="/" className="logo logo-white">Amore</Link>
+
+          <h1 className="title title-home-hero">Somos amor, paciência, espaço e empatia.</h1>
+          <p className="intro body-large">O que somos, usamos para que animais não humanos recuperem a tranquilidade, confiança e autonomia.</p>
           <Button to="#trabalho" type="button-light">O Nosso Trabalho</Button>
         </div>
       </section>

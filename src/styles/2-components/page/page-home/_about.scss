@@ -18,7 +18,7 @@
   }
 
   .rows {
-    @include grid(1fr, $gap: 40px)
+    @include grid(1fr, $gap-r: 40px)
     width: 100%;
   }
 
@@ -27,6 +27,8 @@
 
     .image-wrapper {
       width: 100%;
+      max-width: $col-6;
+      justify-self: center;
     }
 
     p + p {
@@ -45,25 +47,67 @@
       }
     }
 
-    &:nth-child(2) {
-      .image-wrapper {
-        max-width: $col-4;
-        justify-self: center;
-      }
-      
+    &:nth-child(2) {      
       .content {
-        max-width: $col-4;
+        max-width: 386px;
         justify-self: center;
       }
     }
 
     &:last-child {
-      grid-template-columns: 1fr $col-7;
-
       .quote {
         justify-self: center;
         @include replace-text('text/text-quote-about.png', $width: 230px, $height: 262px);
       }
+    }
+  }
+
+  @include mq-max(1040) {
+    .row:last-child .quote {
+      @include wh(200px, 228px);
+    }
+  }
+
+  @include mq-max($break-tablet) {
+    .section-header {
+      margin-bottom: 56px;
+    }
+
+    .rows {
+      row-gap: 56px;
+    }
+
+    .row {
+      grid-template-columns: 1fr;
+
+      .image-wrapper {
+        width: calc(100% + 20px); 
+      }
+
+      &:first-child {
+        .image-wrapper {
+          order: -1;
+        }
+
+        .content {
+          justify-self: center;
+        }
+      }
+
+      &:last-child {
+        .image-wrapper {
+          order: -1;
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+
+  @include mq-max(570) {
+    padding-bottom: 40px;
+
+    .row:last-child .quote {
+      @include wh(180px, 205px);
     }
   }
 }
