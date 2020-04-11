@@ -10,7 +10,7 @@ import Contacts from '../components/sections/section-contacts'
 const Cuidar = () => {
   const data = useStaticQuery(graphql`
     query {
-      image1: file (relativePath: { eq: "page-sections/image-alojamento-1.png" }) {
+      image1: file (relativePath: { eq: "page-sections/image-alojamento-1.jpg" }) {
         childImageSharp {
           fluid (quality: 100) {
             ...GatsbyImageSharpFluid
@@ -18,7 +18,7 @@ const Cuidar = () => {
         }
       }
 
-      image2: file (relativePath: { eq: "page-sections/image-alojamento-2.png" }) {
+      image2: file (relativePath: { eq: "page-sections/image-alojamento-2.jpg" }) {
         childImageSharp {
           fluid (quality: 100) {
             ...GatsbyImageSharpFluid

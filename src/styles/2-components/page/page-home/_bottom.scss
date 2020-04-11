@@ -6,13 +6,12 @@
 .bottom {
   margin-top: -200px;
   position: relative;
-  display: none;
 
-  &::after {
-    content: '';
-    display: block;
-    @include wh(100%, 48px);
-    @include background('brushes/brush-hero-bottom.png', $size: 120%);
-    @include pos($bottom: -20px);
-  }
+  // &::after {
+  //   content: '';
+  //   display: block;
+  //   @include wh(100%, 48px);
+  //   @include background('brushes/brush-hero-bottom.jpg', $size: 120%);
+  //   @include pos($bottom: -20px);
+  // }
 }

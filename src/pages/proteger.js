@@ -8,7 +8,7 @@ import Button from '../components/button'
 const Proteger = () => {
   const data = useStaticQuery(graphql`
     query {
-      image1: file (relativePath: { eq: "page-sections/image-santuario-1.png" }) {
+      image1: file (relativePath: { eq: "page-sections/image-santuario-1.jpg" }) {
         childImageSharp {
           fluid (quality: 100) {
             ...GatsbyImageSharpFluid
@@ -16,7 +16,7 @@ const Proteger = () => {
         }
       }
 
-      image2: file (relativePath: { eq: "page-sections/image-santuario-2.png" }) {
+      image2: file (relativePath: { eq: "page-sections/image-santuario-2.jpg" }) {
         childImageSharp {
           fluid (quality: 100) {
             ...GatsbyImageSharpFluid
@@ -24,7 +24,7 @@ const Proteger = () => {
         }
       }
 
-      image3: file (relativePath: { eq: "page-sections/image-santuario-3.png" }) {
+      image3: file (relativePath: { eq: "page-sections/image-santuario-3.jpg" }) {
         childImageSharp {
           fluid (quality: 100) {
             ...GatsbyImageSharpFluid
@@ -32,7 +32,7 @@ const Proteger = () => {
         }
       }
 
-      image4: file (relativePath: { eq: "page-sections/image-santuario-4.png" }) {
+      image4: file (relativePath: { eq: "page-sections/image-santuario-4.jpg" }) {
         childImageSharp {
           fluid (quality: 100) {
             ...GatsbyImageSharpFluid
@@ -40,7 +40,7 @@ const Proteger = () => {
         }
       }
 
-      image5: file (relativePath: { eq: "page-sections/image-hopeful-1.png" }) {
+      image5: file (relativePath: { eq: "page-sections/image-hopeful-1.jpg" }) {
         childImageSharp {
           fluid (quality: 100) {
             ...GatsbyImageSharpFluid

@@ -9,7 +9,7 @@ import Contacts from '../components/sections/section-contacts'
 const Home = () => {
   const data = useStaticQuery(graphql`
     query {
-      gallery1: file (relativePath: { eq: "page-sections/image-home-gallery-1.png" }) {
+      gallery1: file (relativePath: { eq: "page-sections/image-home-gallery-1.jpg" }) {
         childImageSharp {
           fluid (maxWidth: 400, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -17,7 +17,7 @@ const Home = () => {
         }
       }
 
-      gallery2: file (relativePath: { eq: "page-sections/image-home-gallery-2.png" }) {
+      gallery2: file (relativePath: { eq: "page-sections/image-home-gallery-2.jpg" }) {
         childImageSharp {
           fluid (quality: 100) {
             ...GatsbyImageSharpFluid
@@ -25,7 +25,7 @@ const Home = () => {
         }
       }
 
-      gallery3: file (relativePath: { eq: "page-sections/image-home-gallery-3.png" }) {
+      gallery3: file (relativePath: { eq: "page-sections/image-home-gallery-3.jpg" }) {
         childImageSharp {
           fluid (maxWidth: 400, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -33,7 +33,7 @@ const Home = () => {
         }
       }
 
-      gallery4: file (relativePath: { eq: "page-sections/image-home-gallery-4.png" }) {
+      gallery4: file (relativePath: { eq: "page-sections/image-home-gallery-4.jpg" }) {
         childImageSharp {
           fluid (quality: 100) {
             ...GatsbyImageSharpFluid
@@ -64,14 +64,6 @@ const Home = () => {
           }
         }
       }
-
-      footer: file (relativePath: { eq: "backgrounds/background-footer-home.png" }) {
-        childImageSharp {
-          fluid (quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
     }
   `)
 
@@ -82,7 +74,6 @@ const Home = () => {
   const about1 = data.about1.childImageSharp.fluid;
   const about2 = data.about2.childImageSharp.fluid;
   const about3 = data.about3.childImageSharp.fluid;
-  const footer = data.footer.childImageSharp.fluid;
 
   return (
     <Layout type="home" title="Amore">
@@ -189,10 +180,6 @@ const Home = () => {
       </section>
 
       <Contacts />
-
-      <section className="bottom">
-        <Img fluid={footer} alt="Amore" draggable="false" />
-      </section>
     </Layout>
   )
 }

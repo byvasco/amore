@@ -8,5 +8,53 @@
   @import "work";
   @import "gallery";
   @import "about";
-  @import "bottom";
+
+  .footer-main {
+    position: relative;
+    padding-top: calc(120px + 550px);
+    
+    &::before {
+      content: '';
+      display: block;
+      @include wh(100%, 550px);
+      @include background('backgrounds/background-footer-home.jpg', $size: cover);
+      @include pos($bottom: 360px);
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      @include wh(100%, 48px);
+      @include background('brushes/brush-hero-bottom.png', $size: 120%);
+      @include pos($bottom: 330px);
+    }
+
+    @include mq-max(1200) {
+      &::after {
+        background-size: cover;
+      }
+    }
+
+    @include mq-max(960) {
+      padding-top: calc(80px + 550px);
+
+      &::before {
+        bottom: 379px;
+      }
+
+      &::after {
+        bottom: 358px;
+      }
+    }
+
+    @include mq-max($break-tablet) {
+      padding-top: calc(80px + 343px);
+
+      &::before {
+        height: 343px;
+        background-size: 900px 343px;
+        background-position: bottom center;
+      }
+    }
+  }
 }
