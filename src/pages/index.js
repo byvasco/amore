@@ -87,7 +87,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="work">
+      <section className="work" id="trabalho">
         <div className="container flex-center">
           <div className="intro flex-center">
             <h2 className="title title-trabalho">O Nosso Trabalho</h2>
