@@ -1,0 +1,53 @@
+/**
+ * Components
+ * Top Bar
+ */
+
+.top-bar {
+  width: 100%;
+  background-color: get-color(accent, primary);
+  color: white;
+  padding: 12px 0 4px;
+  // @include pos(0, $pos: fixed, $z: 999);
+
+  .container {
+    flex-direction: row;
+    height: 100%;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    @include wh(100%, 40px);
+    @include background('brushes/brush-top-bar.svg', $size: 120%);
+    @include pos(24px);
+  }
+
+  p {
+    margin-right: 12px;
+    @include pos(-2px, $pos: relative);
+  }
+
+  a {
+    flex-shrink: 0;
+  }
+
+  a::after {
+    opacity: .4;
+  }
+
+  @include mq-max(1200) {
+    &::before {
+      background-size: cover;
+    }
+  }
+  
+  @include mq-max(480) {
+    p {
+      max-width: 170px;
+      text-align: center;
+      line-height: 18px;
+      top: -4px;
+    }
+  }
+}

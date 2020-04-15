@@ -11,6 +11,13 @@ const Layout = ({ name, type, title, locked, children }) => {
   
   return (
     <main className={className}>
+      <div className="top-bar">
+        <div className="container flex-center">
+          <p className="body-small bold white">Ajudas-nos a proteger uma vida com 1€?</p>
+          <a href="#" class="button-small">Quero Ajudar</a>
+        </div>
+      </div>
+
       {locked ? <LockedOverlay />: null}
       <SEO />
 
