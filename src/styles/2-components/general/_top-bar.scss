@@ -8,7 +8,6 @@
   background-color: get-color(accent, primary);
   color: white;
   padding: 12px 0 4px;
-  // @include pos(0, $pos: fixed, $z: 999);
 
   .container {
     flex-direction: row;
@@ -33,7 +32,7 @@
   }
 
   a::after {
-    opacity: .4;
+    opacity: .1;
   }
 
   @include mq-max(1200) {
