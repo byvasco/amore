@@ -52,26 +52,19 @@ button {
 }
 
 .button {
+  @extend .button-text;
   display: inline-block;
   padding: 16px 36px;
-  position: relative;
-  @extend .button-text;
+  @include background('buttons/button-background-dark.svg', $size: 100% 100%);
   color: get-color(text, white);
   text-align: center;
   transition: all 120ms;
+  position: relative;
   z-index: 1;
 
   &:hover {
     transform: scale(.98);
     opacity: .9;
-  }
-
-  &::before {
-    content: '';
-    display: block;
-    @include wh(100%, 54px);
-    @include background('buttons/button-background-dark.svg', $size: 100% 100%);
-    @include pos(0, $left: 0, $z: -1);
   }
 
   &.messenger {
@@ -112,9 +105,21 @@ button {
   &-light {
     @extend .button;
     color: get-color(text, primary);
+    @include background('buttons/button-background-light.svg', $size: 100% 100%);
+  }
 
-    &::before {
-      @include background('buttons/button-background-light.svg', $size: 100% 100%);
+  &-small {
+    @extend .button;
+    font-size: 13px;
+    padding: 8px 16px;
+    background: none;
+
+    &::after {
+      content: '';
+      display: block;
+      @include wh(100%, 100%);
+      @include background('buttons/button-background-dark.svg', $size: 100% 100%);
+      @include pos(0, $left: 0, $z: -1);
     }
   }
 }

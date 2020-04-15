@@ -17,6 +17,11 @@
 
   &-small {
     @include font(18, 20, -0.1);
+
+    &.bold {
+      font-weight: 700;
+      letter-spacing: -0.16px;
+    }
   }
 
   &-bold {
@@ -170,6 +175,10 @@ time {
 
 .highlight {
   @include background('brushes/brush-text-highlight.svg', $size: 100% 8px);
+}
+
+.white {
+  color: white;
 }
 
 // Text Selection
