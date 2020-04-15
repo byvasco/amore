@@ -8,6 +8,8 @@
   background-color: get-color(accent, primary);
   color: white;
   padding: 12px 0 4px;
+  position: relative;
+  z-index: 999;
 
   .container {
     flex-direction: row;
