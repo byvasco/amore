@@ -9,9 +9,10 @@ collections:
   - name: animals
     label: Animals
     folder: content/animals
+    slug: "{{name}}"
     create: true
     fields:
-      - { name: name, label: Nome }
+      - { name: title, label: Nome }
       - {
         name: race,
         label: Raça,
