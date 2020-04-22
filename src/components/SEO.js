@@ -34,6 +34,8 @@ const SEO = ({ title, description, article }) => {
       {seo.description && (
         <meta property="og:description" content={seo.description} />
       )}
+
+      <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </Helmet>
   )
 }
