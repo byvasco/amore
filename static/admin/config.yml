@@ -1,0 +1,90 @@
+backend:
+  name: github
+  repo: byvasco/amore
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: animals
+    label: Animals
+    folder: content/animals
+    create: true
+    fields:
+      - { name: name, label: Nome }
+      - {
+        name: race,
+        label: Raça,
+        widget: select,
+        options: [
+          "Rafeiro Comum",
+          "Rafeiro Comum",
+          "Rafeiro Comum",
+          "Rafeiro Comum"
+        ]
+      }
+
+      - {
+        name: age,
+        label: Idade,
+        widget: select,
+        options: [
+          "Bebé",
+          "Jovem",
+          "Adulto",
+          "Idoso"
+        ]
+      }
+
+      - {
+        name: sex,
+        label: Sexo,
+        widget: select,
+        options: [
+          "Macho",
+          "Fêmea"
+        ]
+      }
+
+      - {
+        name: size,
+        label: Porte,
+        widget: select,
+        options: [
+          "Pequeno",
+          "Médio",
+          "Grande"
+        ]
+      }
+
+      - {
+        name: fur,
+        label: Pêlo,
+        widget: select,
+        options: [
+          "Preto",
+          "Branco",
+          "Amarelo",
+          "Outra cor"
+        ]
+      }
+
+      - {
+        name: sterelized,
+        label: Esterelizado,
+        widget: boolean
+      }
+
+      - {
+        name: vaccines,
+        label: Vacinas em dia,
+        widget: boolean
+      }
+
+      - {
+        name: dewormed,
+        label: Desparasitado,
+        widget: boolean
+      }
+
+      - { name: body, label: Body, widget: markdown }
