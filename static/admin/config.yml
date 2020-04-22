@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   repo: byvasco/amore
 
 media_folder: static/assets
@@ -70,24 +70,24 @@ collections:
       }
 
       - {
-        name: sterelized,
+        name: sterilised,
         label: Esterelizado,
         widget: boolean,
-        required: false
+        required: true
       }
 
       - {
         name: vaccines,
         label: Vacinas em dia,
         widget: boolean,
-        required: false
+        required: true
       }
 
       - {
         name: dewormed,
         label: Desparasitado,
         widget: boolean,
-        required: false
+        required: true
       }
 
       - name: images
