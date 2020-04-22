@@ -70,7 +70,7 @@ collections:
       }
 
       - {
-        name: sterelized,
+        name: sterilised,
         label: Esterelizado,
         widget: boolean,
         required: false
