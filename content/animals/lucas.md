@@ -6,8 +6,8 @@ fur: Preto
 sterelized: true
 race: Rafeiro Comum
 sex: Macho
-sterilised: true
-vaccines: false
+sterilised: false
+vaccines: true
 dewormed: true
 images:
   - /assets/mk2swag_81593974_460012451336718_1833775138092715741_n.jpg
