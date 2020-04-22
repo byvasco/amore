@@ -1,12 +1,13 @@
 ---
 title: Lucas
-race: Rafeiro Comum
 age: Bebé
-sex: Macho
 size: Pequeno
 fur: Preto
 sterelized: true
-vaccines: true
+race: Rafeiro Comum
+sex: Macho
+sterilised: true
+vaccines: false
 dewormed: true
 images:
   - /assets/mk2swag_81593974_460012451336718_1833775138092715741_n.jpg
