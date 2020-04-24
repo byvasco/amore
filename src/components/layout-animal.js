@@ -6,8 +6,9 @@ const LayoutAnimal = ({ title, children }) => {
   return (
     <main className="page-animal">
       <SEO title={title} />
-      <header class="header-back">
+      <header className="header-back">
         <div className="container">
+          <Link to="/proteger#adocao" className="button-text back">Voltar Atrás</Link>
           <Link to="/" className="logo">Amore</Link>
         </div>
       </header>

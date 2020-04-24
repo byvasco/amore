@@ -1,0 +1,86 @@
+/**
+ * Components / Page Animal
+ * Content
+ */
+
+.content {
+  div[class*="container"] {
+    @include grid(1fr, $gap-r: 64px);
+  }
+
+  .main-content {
+    @include grid($col-5 $col-3);
+  }
+
+  .animal-story,
+  .conclusion {
+    p {
+      @extend .body-long;
+    }
+
+    p + p {
+      margin-top: 16px;
+    }
+  }
+
+  .details {
+    @include background('backgrounds/background-aside.svg', $size: 100%);
+    max-height: 560px;
+    padding: 56px 52px;
+    transform: translateX(80px);
+
+    .item + .item {
+      margin-top: 26px;
+    }
+
+    .key {
+      margin-bottom: 2px;
+    }
+
+    .medical-details {
+      margin-top: 40px;
+
+      .medical-item  {
+        @include flex($align: center);
+
+        & + .medical-item {
+          margin-top: 10px;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          @include wh(20px, 20px);
+          margin-right: 8px;
+        }
+
+        &.true::before {
+          @include background('icons/icon-check.svg', $size: 100%);
+        }
+
+        &:not(.true) {
+          opacity: .4;
+          
+          &::before {
+            @include background('icons/icon-cross.svg', $size: 100%);
+            opacity: .7;
+          }
+        }
+      }
+    }
+  }
+
+  .action {
+    justify-self: center;
+    margin-bottom: 24px;
+  }
+
+  .conclusion {
+    max-width: $col-5;
+    padding-bottom: 120px;
+
+    .title {
+      margin-bottom: 24px;
+    }
+  }
+}
