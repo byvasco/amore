@@ -22,17 +22,20 @@
     text-align: center;
 
     &-image {
-      @include wh(220px, 220px);
+      @include wh(100%, $max-w: 220px);
+      padding-bottom: 100%;
       background-size: cover;
       border-radius: 110px;
       margin-bottom: 24px;
       transition: all 120ms;
+      position: relative;
 
       &::before {
         content: '';
         display: block;
         @include wh(100%, 100%);
-        @include background('brushes/brush-adoption-preview-mask.svg');
+        @include background('brushes/brush-adoption-preview-mask.svg', $size: 100%);
+        @include pos();
       }
 
       &:hover {
