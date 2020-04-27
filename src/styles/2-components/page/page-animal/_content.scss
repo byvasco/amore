@@ -83,4 +83,21 @@
       margin-bottom: 24px;
     }
   }
+
+  @include mq-max(1000) {
+    .details {
+      transform: translateX(0);
+    }
+  }
+
+  @include mq-max($break-tablet) {
+    .main-content {
+      @include grid(minmax(0, $col-5), $justify: center);
+    }
+
+    .details {
+      order: -1;
+      max-width: 400px;
+    }
+  }
 }

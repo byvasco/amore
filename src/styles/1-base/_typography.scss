@@ -140,6 +140,12 @@ a {
   &-6 {
     @include font(24, 24, -0.4, 800, $family: $font-secondary);
   }
+
+  @include mq-max($break-tablet) {
+    &-2 {
+      @include font(40, 32, -0.22, 800, $family: $font-secondary);
+    }
+  }
 }
 
 // Subtitles

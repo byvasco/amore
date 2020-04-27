@@ -5,6 +5,7 @@
 
 .page-header {
   padding-bottom: 72px;
+  overflow: hidden;
 
   .carousel {
     position: relative;
@@ -106,6 +107,32 @@
       @include wh(400px, 48px);
       @include background('brushes/brush-page-title.svg', $pos-y: top, $size: 100%);
       position: relative;
+    }
+  }
+
+  @include mq-max(650) {
+    padding-bottom: 48px;
+
+    .brush-edges {
+      display: none;
+    }
+
+    .carousel-container {
+      max-width: 100%;
+    }
+
+    .actions {
+      width: 100%;
+      left: 0;
+      overflow: hidden;
+
+      .previous {
+        margin-left: -6px;
+      }
+
+      .next {
+        margin-right: -6px;
+      }
     }
   }
 }

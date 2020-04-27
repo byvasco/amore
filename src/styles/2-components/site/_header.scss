@@ -174,4 +174,14 @@
     grid-area: logo;
     justify-self: center;
   }
+
+  @include mq-max(570) {
+    .logo {
+      height: 100px;
+    }
+
+    .back {
+      font-size: 0;
+    }
+  }
 }
