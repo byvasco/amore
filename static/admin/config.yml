@@ -72,22 +72,19 @@ collections:
       - {
         name: sterilised,
         label: Esterelizado,
-        widget: boolean,
-        required: false
+        widget: boolean
       }
 
       - {
         name: vaccines,
         label: Vacinas em dia,
-        widget: boolean,
-        required: false
+        widget: boolean
       }
 
       - {
         name: dewormed,
         label: Desparasitado,
-        widget: boolean,
-        required: false
+        widget: boolean
       }
 
       - name: images

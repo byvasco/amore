@@ -22,9 +22,18 @@
     text-align: center;
 
     &-image {
-      max-width: 220px;
+      @include wh(220px, 220px);
+      background-size: cover;
+      border-radius: 110px;
       margin-bottom: 24px;
       transition: all 120ms;
+
+      &::before {
+        content: '';
+        display: block;
+        @include wh(100%, 100%);
+        @include background('brushes/brush-adoption-preview-mask.svg');
+      }
 
       &:hover {
         transform: scale(1.03);

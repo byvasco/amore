@@ -24,6 +24,15 @@
     }
   }
 
+  &-smaller {
+    @include font(16, 20, -0.1);
+
+    &-bold {
+      @extend .body-smaller;
+      font-weight: 600;
+    }
+  }
+
   &-bold {
     @include font(22, 28, -0.2, 700);
   }
@@ -71,6 +80,18 @@ p {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
+
+  &.back {
+    @include flex($align: center);
+    
+    &::before {
+      content: '';
+      display: block;
+      @include wh(14px, 14px);
+      @include background('icons/icon-button-back.svg', $size: 100%);
+      margin-right: 8px;
+    }
+  }
 }
 
 a {
@@ -104,9 +125,12 @@ a {
 
 // Titles
 .title {
-  &-5,
-  &-6 {
+  &-2, &-5, &-6 {
     text-transform: uppercase;
+  }
+
+  &-2 {
+    @include font(52, 40, -0.28, 800, $family: $font-secondary);
   }
 
   &-5 {
@@ -133,6 +157,14 @@ a {
 .label {
   text-transform: uppercase;
   @include font(12, 12, -0.26, 700, $family: $font-secondary);
+}
+
+// Caption
+.caption {
+  &-1 {
+    text-transform: uppercase;
+    @include font(14, 20, -0.24, 700, $family: $font-secondary);
+  }
 }
 
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import LayoutMainPage from '../components/layout-main-page'
 import MainPageSectionHeader from '../components/sections/main-page--section-header'
@@ -60,6 +60,17 @@ const Proteger = () => {
                 srcSet
                 sizes
               }
+            }
+          }
+        }
+      }
+
+      animals: allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              title
+              images
             }
           }
         }
@@ -163,15 +174,12 @@ const Proteger = () => {
           <h2 className="section-title title-adocao">Para Adoção</h2>
 
           <div className="animals-list grid-4">
-            {imagesAdoption.map( ({ node }, i) => {
-              let animalName = node.childImageSharp.fluid.originalName;
-              animalName = animalName.substring(0, animalName.indexOf('.'));
-
+            {data.animals.edges.map( ({ node }, i) => {
               return(
-                <a href="amorempatia.org" className={`animal ${animalName}`}>
-                  <Img fluid={node.childImageSharp.fluid} key={i} className="animal-image" />
-                  <p className="animal-name subtitle-small">{animalName}</p>
-                </a>
+                <Link to={`/${node.frontmatter.title.toLowerCase()}`} className="animal">
+                  <div className="animal-image" style={{backgroundImage: 'url(' + node.frontmatter.images[0] + ')'}}></div>
+                  <p className="animal-name subtitle-small">{node.frontmatter.title}</p>
+                </Link>
               )
             })}
           </div>

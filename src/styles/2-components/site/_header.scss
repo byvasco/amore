@@ -119,15 +119,6 @@
         @include background('backgrounds/background-tile-proteger.jpg', $size: cover);
       }
     }
-
-    // &::before {
-    //   content: '';
-    //   display: block;
-    //   @include wh(100%, 100vh);
-    //   background-color: black;
-    //   opacity: .6;
-    //   @include pos(0, $left: 0, $z: -1);
-    // }
   }
 
   &.drawer {
@@ -167,5 +158,20 @@
     .button-drawer {
       right: 294px;
     }
+  }
+}
+
+.header-back {
+  width: 100%;
+  padding: 40px 0;
+
+  .container {
+    @include grid(repeat(3, 1fr), $align: center);
+    grid-template-areas: 'action logo .';
+  }
+
+  .logo {
+    grid-area: logo;
+    justify-self: center;
   }
 }

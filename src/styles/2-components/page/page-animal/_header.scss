@@ -1,0 +1,111 @@
+/**
+ * Components / Page Animal
+ * Header
+ */
+
+.page-header {
+  padding-bottom: 72px;
+
+  .carousel {
+    position: relative;
+  }
+
+  .brush-edges {
+    @include wh(100%, 100%);
+
+    &::before {
+      content: '';
+      display: block;
+      @include wh(100%, 48px);
+      @include background('brushes/brush-hero-top.png', $pos-x: -270px, $size: cover);
+      @include pos(130px, $left: -294px, $z: 1);
+      transform: rotate(-90deg);
+    }
+  
+    &::after {
+      content: '';
+      display: block;
+      @include wh(100%, 48px);
+      @include background('brushes/brush-hero-bottom.png', $size: cover);
+      @include pos($bottom: 130px, $right: -298px, $z: 1);
+      transform: rotate(-90deg);
+    }
+  }
+
+  .carousel-container {
+    max-width: $col-6;
+    max-height: 420px;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      display: block;
+      @include wh(100%, 48px);
+      @include background('brushes/brush-hero-top.png', $pos-x: -270px, $size: cover);
+      @include pos(-28px, $z: 1);
+    }
+  
+    &::after {
+      content: '';
+      display: block;
+      @include wh(100%, 48px);
+      @include background('brushes/brush-hero-bottom.png', $size: cover);
+      @include pos($bottom: -20px, $z: 1);
+    }
+  }
+
+  .slider {
+    @include flex();
+    @include wh(100%, 100%, $max-h: 420px);
+    transition: all 120ms;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .actions {
+    width: calc(100% + 32px);
+    @include flex(space-between);
+    @include pos(50%, $left: -16px, $z: 2);
+    transform: translateY(-50%);
+  }
+
+  .action {
+    @include wh(44px, 40px);
+    @include background('buttons/button-carousel-arrow.svg', $size: 100%);
+    transition: all 120ms;
+
+    &.previous {
+      transform: rotate(180deg);
+    }
+
+    &.disabled {
+      @include background('buttons/button-carousel-arrow-disabled.svg', $size: 100%);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        transform: translateX(3px);
+      }
+
+      &.previous:hover {
+        transform: rotate(180deg) translateX(3px);
+      }
+    }
+  }
+
+  .animal-name {
+    text-align: center;
+    margin-top: -42px;
+    @include pos($pos: relative, $z: 9);
+
+    &::before {
+      content: '';
+      display: block;
+      @include wh(400px, 48px);
+      @include background('brushes/brush-page-title.svg', $pos-y: top, $size: 100%);
+      position: relative;
+    }
+  }
+}
